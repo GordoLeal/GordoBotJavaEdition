@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jagrosh:jda-utilities-command:2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jagrosh/jda-utilities-command/2.1/56d6a5439f3cbd4c1739f4457184f72025d02ec7/jda-utilities-command-2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jagrosh/jda-utilities-command/2.1/de79d832e0522df1352f225cf1746bd95f67c308/jda-utilities-command-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
