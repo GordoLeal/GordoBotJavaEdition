@@ -1,9 +1,6 @@
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
-import commands.HelloWorld;
-import commands.ban;
-import commands.kick;
-import commands.teste;
+import commands.*;
 import net.dv8tion.jda.core.*;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
@@ -35,7 +32,8 @@ public class Main extends ListenerAdapter{
                 new HelloWorld(),
                 new kick(),
                 new ban(),
-                new teste()
+                new teste(),
+                new desban()
                 );
         client.setGame(Game.playing("ONLINE"));
 

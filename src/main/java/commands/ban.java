@@ -33,10 +33,11 @@ public class ban extends Command{
 
             reason = comd[1];
 
+
         }catch (Exception e){
 
-            event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo");
-
+            event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo, banimento será realizado sem descrição");
+            reason = (event.getAuthor() + " realizou o banimento sem colocar o motivo");
         }
 
 
@@ -46,7 +47,7 @@ public class ban extends Command{
             return;
 
         }
-        if(!author.hasPermission(Permission.KICK_MEMBERS)){
+        if(!author.hasPermission(Permission.BAN_MEMBERS)){
 
             event.reply("você não tem permissão para banir ninguém, contate o adiministrador do servidor");
             return;
@@ -64,13 +65,12 @@ public class ban extends Command{
 
         try{
             event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention());
-
-            guild.getController().ban(event.getMessage().getMentionedMembers().get(0),30);
-
+            guild.getController().ban(mentioned.get(0),1,reason).queue();
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
 
         }catch (Exception e){
             event.reply("um erro aconteceu");
+            return;
         }
 
         return;
