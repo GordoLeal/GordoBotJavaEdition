@@ -1,10 +1,14 @@
 package commands;
-
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.entities.Game;
 
+/*
+
+COMANDO ABANDONADO, ARQUIVO GUARDADO PARA HISTORICO
+
+*/
 public class mudarstatus extends Command {
     public mudarstatus(){
         this.name = "mudarstatus";

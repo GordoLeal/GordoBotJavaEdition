@@ -8,7 +8,9 @@ import net.dv8tion.jda.core.entities.Message;
 
 import java.util.List;
 
-
+/*
+COMANDO PARA EXPULSÃO DE USUARIO
+ */
 public class kick extends Command {
     public kick(){
         this.name = "kick";

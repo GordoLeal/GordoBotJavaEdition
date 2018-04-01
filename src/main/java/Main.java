@@ -18,7 +18,7 @@ public class Main extends ListenerAdapter{
     public static void main(String[] args) throws LoginException, IOException, IllegalArgumentException, RateLimitedException {
 
         String configpath = "config.txt";
-        String token = "";
+        String token = ""; //DEVE SER DEIXADO EM BRANCO POR MOTIVOS DE BUGS (? A SER ANALISADO)
         try{
             Files.createFile(Paths.get(configpath));
         }catch (Exception e){
@@ -30,7 +30,7 @@ public class Main extends ListenerAdapter{
         EventWaiter waiter = new EventWaiter();
         CommandClientBuilder client = new CommandClientBuilder();
         client.setPrefix("gordo ");
-        client.setOwnerId("");
+        client.setOwnerId(""); //ADICIONAR FUNÇÃO DE PROCURAR PELA OWNERID NA CONFIG.TXT, POR AGORA TO COM PREGUIÇA
         client.addCommands(
                 new HelloWorld(),
                 new kick(),
@@ -38,7 +38,6 @@ public class Main extends ListenerAdapter{
                 new teste()
                 );
         client.setGame(Game.playing("ONLINE"));
-
 
         try{
 
@@ -51,6 +50,7 @@ public class Main extends ListenerAdapter{
                     .buildAsync();
 
         }catch (Exception e){
+
             System.out.println("PROBLEMAS NA CONEXÃO// ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?");
             System.in.read();
 
