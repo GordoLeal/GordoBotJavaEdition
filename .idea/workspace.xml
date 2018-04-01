@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="">
+    <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="Organização de arquivos e descrição de algumas besteiras">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/commands/ban.class" afterPath="$PROJECT_DIR$/build/classes/main/commands/ban.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/commands/kick.class" afterPath="$PROJECT_DIR$/build/classes/main/commands/kick.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/commands/mudarstatus.class" afterPath="$PROJECT_DIR$/build/classes/main/commands/mudarstatus.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/commands/teste.class" afterPath="$PROJECT_DIR$/build/classes/main/commands/teste.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/commands/ban.java" afterPath="$PROJECT_DIR$/src/main/java/commands/ban.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -1240,7 +1239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522620453228</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Organização de arquivos e descrição de algumas besteiras">
+      <created>1522620498366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1522620498366</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
