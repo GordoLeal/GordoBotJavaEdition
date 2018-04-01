@@ -30,7 +30,7 @@ public class Main extends ListenerAdapter{
         EventWaiter waiter = new EventWaiter();
         CommandClientBuilder client = new CommandClientBuilder();
         client.setPrefix("gordo ");
-        client.setOwnerId("157972666790182912");
+        client.setOwnerId("");
         client.addCommands(
                 new HelloWorld(),
                 new kick(),
