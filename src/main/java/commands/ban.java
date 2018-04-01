@@ -9,7 +9,7 @@ import java.util.List;
 
 /*
  COMANDO PARA BANIMENTO DE USUARIO
- */
+*/
 public class ban extends Command{
     public ban(){
         this.name = "ban";

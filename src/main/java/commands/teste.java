@@ -5,7 +5,8 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 
 /*
  COMANDO PARA TESTE DE ARGUMENTOS E ETC... NÃO POSSUI OBJETIVO, APENAS PARA TESTES
- */
+
+*/
 
 public class teste extends Command {
     public teste(){
