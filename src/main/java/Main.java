@@ -17,8 +17,8 @@ import java.nio.file.Paths;
 public class Main extends ListenerAdapter{
     public static void main(String[] args) throws LoginException, IOException, IllegalArgumentException, RateLimitedException {
 
-        String configpath = "config.txt";
-        String token = ""; //DEVE SER DEIXADO EM BRANCO POR MOTIVOS DE BUGS (? A SER ANALISADO)
+        String configpath = "config.txt"; //AINDA EM DESENVOLVIMENTO, SÓ JOGAR A TOKEN KEY DENTRO DA PASTA E SALVAR
+        String token = ""; //DEVE SER DEIXADO EM BRANCO POR MOTIVOS DE BUGS (?) [A SER ANALISADO]
         try{
             Files.createFile(Paths.get(configpath));
         }catch (Exception e){
