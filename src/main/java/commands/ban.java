@@ -8,7 +8,7 @@ import net.dv8tion.jda.core.entities.Member;
 import java.util.List;
 
 /*
- COMANDO PARA BANIMENTO DE USUARIO
+ COMANDO PARA BANIMENTO DE USUARIO, ESTA BUGADO, NECESSITA DE REPARO
 */
 public class ban extends Command{
     public ban(){
