@@ -6,8 +6,6 @@ import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Member;
 import net.dv8tion.jda.core.entities.Message;
 
-import java.util.List;
-
 /*
 COMANDO PARA EXPULSÃO DE USUARIO
 
@@ -18,25 +16,26 @@ public class kick extends Command {
         this.aliases = new String[]{"expulse","expulsar","chutar","chute"};
         this.help = "expulsa a conta do servidor";
         this.arguments = "<person> <reason>";
+        this.guildOnly = true;
     }
 
     @Override
     public void execute(CommandEvent event){
         Guild guild = event.getGuild();
         Member author = event.getMessage().getMember();
-        List<Member> mentioned = event.getMessage().getMentionedMembers();
-
+        Member mentioned = event.getMessage().getMentionedMembers().get(0);
         String[] comd = event.getArgs().split(",");
-        String reason = comd[1];
-
+        String reason = "";
+        try {
+            reason = comd[1];
+        }catch(Exception e){
+            reason = (event.getAuthor().getAsMention()+" expulsou o usuario "+mentioned);
+        }
         if(!guild.getSelfMember().hasPermission(Permission.KICK_MEMBERS)){
             event.reply("Eu não tenho acesso a expulsar membros do servidor, fale com o adiministrador para me dar um cargo com acesso a **expulsar membros** ativado");
             return;
         }
-        if(guild == null){
-            event.reply("Posso ser gordo porem não sou burro, você precisa executar esse comando no servidor");
-            return;
-        }
+
         if(!author.hasPermission(Permission.KICK_MEMBERS)){
             event.reply("você não tem permissão para expulsar ninguém");
             return;
@@ -48,11 +47,12 @@ public class kick extends Command {
 
         }
 
-        event.reply("``" + author.getAsMention()+ "``" + "** expulsou o usuario: **" + "``" +mentioned.get(0).getAsMention() + "``,");
-        event.reply("**usuario expulso com sucesso**");
         try{
-            guild.getController().kick(mentioned.get(0),reason).queue();
+            guild.getController().kick(mentioned,reason).queue();
+            event.reply(author.getAsMention() + "** expulsou o usuario: **" + mentioned + ":white_check_mark:");
+            //event.reply(":red_circle: **usuario expulso com sucesso** :white_check_mark:");
         } catch (Exception e){
+            event.reply("erro, verificar console");
             event.reply((Message) e);
         }
         return;

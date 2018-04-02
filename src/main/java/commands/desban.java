@@ -24,7 +24,7 @@ public class desban extends Command{
         Member author = event.getMessage().getMember();
 
         if(event.getMessage().getMentionedUsers().isEmpty()){
-            event.reply("você não falou ninguem para desbanir");
+            event.reply("você não mencionou ninguem para desbanir");
         }
 
         if(!author.hasPermission(Permission.BAN_MEMBERS)){
@@ -35,8 +35,10 @@ public class desban extends Command{
         event.reply("comando em desenvolvimento, nada vai acontecer");
        try{
            guild.getController().unban(event.getMessage().getMentionedUsers().get(0).getId()).queue();
+           event.reply("desbanimento concluido :white_check_mark:");
        }catch (IllegalArgumentException e){
-           event.reply(e.getMessage());
+           System.out.println();
+           event.reply("um erro aconteceu");
        }
 
 

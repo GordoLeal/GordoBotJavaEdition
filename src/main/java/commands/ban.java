@@ -8,7 +8,7 @@ import net.dv8tion.jda.core.entities.Member;
 import java.util.List;
 
 /*
- COMANDO PARA BANIMENTO DE USUARIO, ESTA BUGADO, NECESSITA DE REPARO
+ COMANDO PARA BANIMENTO DE USUARIO
 */
 public class ban extends Command{
     public ban(){
@@ -64,7 +64,7 @@ public class ban extends Command{
 
 
         try{
-            event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention());
+            event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention()+" :white_check_mark:");
             guild.getController().ban(mentioned.get(0),1,reason).queue();
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
 
