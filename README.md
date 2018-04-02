@@ -1,1 +1,3 @@
 # GordoBot
+
+AINDA EM DESENVOLVIMENTO
