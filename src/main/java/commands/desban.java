@@ -29,7 +29,14 @@ public class desban extends Command{
         }
 
         event.reply("comando em desenvolvimento, nada vai acontecer");
-        //guild.getController().unban());
+       try{
+           guild.getController().unban(event.getMessage().getMentionedUsers().get(0).getId()).queue();
+       }catch (IllegalArgumentException e){
+           event.reply(e.getMessage());
+       }
+
+
+
 
     }
 }
