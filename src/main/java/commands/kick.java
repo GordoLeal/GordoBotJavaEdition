@@ -31,13 +31,14 @@ public class kick extends Command {
         }catch(Exception e){
             reason = (event.getAuthor().getAsMention()+" expulsou o usuario "+mentioned);
         }
-        if(!guild.getSelfMember().hasPermission(Permission.KICK_MEMBERS)){
-            event.reply("Eu não tenho acesso a expulsar membros do servidor, fale com o adiministrador para me dar um cargo com acesso a **expulsar membros** ativado");
-            return;
-        }
 
         if(!author.hasPermission(Permission.KICK_MEMBERS)){
             event.reply("você não tem permissão para expulsar ninguém");
+            return;
+        }
+
+        if(!guild.getSelfMember().hasPermission(Permission.KICK_MEMBERS)){
+            event.reply("Eu não tenho acesso a expulsar membros do servidor, fale com o adiministrador para me dar um cargo com acesso a **expulsar membros** ativado");
             return;
         }
 
@@ -48,12 +49,14 @@ public class kick extends Command {
         }
 
         try{
-            guild.getController().kick(mentioned,reason).queue();
-            event.reply(author.getAsMention() + "** expulsou o usuario: **" + mentioned + ":white_check_mark:");
-            //event.reply(":red_circle: **usuario expulso com sucesso** :white_check_mark:");
+            event.reply(author.getAsMention() + "** expulsou o usuario: **" + mentioned.getAsMention() + ":white_check_mark:"+"\n"+":red_circle: **usuario expulso com sucesso** :white_check_mark:");
+            guild.getController().kick(mentioned,(event.getAuthor().getAsMention()+reason)).queue();
+            System.out.println("Kick event in:" + event.getGuild().getName()+" Channel: "+event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ mentioned);
+
         } catch (Exception e){
             event.reply("erro, verificar console");
             event.reply((Message) e);
+            return;
         }
         return;
 

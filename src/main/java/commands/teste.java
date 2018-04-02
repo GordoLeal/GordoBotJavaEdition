@@ -13,7 +13,7 @@ public class teste extends Command {
         this.name = "teste";
         this.help = "testar comandos";
         this.arguments = "<teste1> , <teste2>";
-
+        this.cooldown = 3;
     }
 
     @Override
@@ -28,6 +28,11 @@ public class teste extends Command {
 
 
         event.reply(teste1);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         event.reply(teste2);
     }
 }

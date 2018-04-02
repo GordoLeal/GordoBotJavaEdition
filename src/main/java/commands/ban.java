@@ -26,8 +26,14 @@ public class ban extends Command{
         Member author = event.getMessage().getMember();
         List<Member> mentioned = event.getMessage().getMentionedMembers();
         String[] comd = event.getArgs().split(",");
-        String reason = " ";
+        String reason = "";
         String banned = comd[0];
+
+        if(!author.hasPermission(Permission.BAN_MEMBERS)){
+
+        event.reply("você não tem permissão para banir ninguém, contate o adiministrador do servidor");
+        return;
+        }
 
         try{
 
@@ -41,18 +47,12 @@ public class ban extends Command{
         }
 
 
-        if(guild == null){
+        if(guild == null) {
 
             event.reply("Posso ser gordo porem não sou burro, você precisa executar esse comando no servidor");
             return;
-
         }
-        if(!author.hasPermission(Permission.BAN_MEMBERS)){
 
-            event.reply("você não tem permissão para banir ninguém, contate o adiministrador do servidor");
-            return;
-
-        }
 
         if(event.getMessage().getMentionedMembers().isEmpty()){
 
@@ -65,7 +65,7 @@ public class ban extends Command{
 
         try{
             event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention()+" :white_check_mark:");
-            guild.getController().ban(mentioned.get(0),1,reason).queue();
+            guild.getController().ban(mentioned.get(0),7,(event.getAuthor().getName()+reason)).queue();
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
 
         }catch (Exception e){
