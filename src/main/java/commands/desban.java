@@ -6,6 +6,10 @@ import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Member;
 
+/*
+COMANDO PARA DESBANIMENTO, AINDA EM DESENVOLVIMENTO, TALVEZ NÃO FUNCIONE.
+ */
+
 public class desban extends Command{
     public desban(){
         this.name = "unban";

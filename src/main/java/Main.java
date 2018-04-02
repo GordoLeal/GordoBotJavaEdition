@@ -41,7 +41,8 @@ public class Main extends ListenerAdapter{
 
         }catch (Exception e){
 
-            System.out.println("PROBLEMAS NA CONEXÃO// ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?");
+            System.out.println(e);
+            System.out.println("PROBLEMAS NA CONEXÃO // ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?"+"\n"+"Script encerrado");
             return;
         }
 
