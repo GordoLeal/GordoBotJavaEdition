@@ -5,7 +5,6 @@ import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Member;
 import net.dv8tion.jda.core.entities.Message;
-
 /*
 COMANDO PARA EXPULSÃO DE USUARIO
 
@@ -32,6 +31,10 @@ public class kick extends Command {
             reason = (event.getAuthor().getAsMention()+" expulsou o usuario "+mentioned);
         }
 
+        if(!author.hasPermission(Permission.KICK_MEMBERS) && !guild.getSelfMember().hasPermission(Permission.KICK_MEMBERS) && event.getMessage().getMentionedMembers().isEmpty()){
+            event.reply("Digite gordo banir "+event.getAuthor().getAsMention()+", [motivo(opcional)]");
+        }
+
         if(!author.hasPermission(Permission.KICK_MEMBERS)){
             event.reply("você não tem permissão para expulsar ninguém");
             return;
@@ -45,13 +48,13 @@ public class kick extends Command {
         if(event.getMessage().getMentionedMembers().isEmpty()){
             event.reply(author.getEffectiveName()+" Não encontrei esta pessoa, tem certeza que mencionou o nome corretamente?");
             return;
-
         }
 
         try{
             event.reply(author.getAsMention() + "** expulsou o usuario: **" + mentioned.getAsMention() + ":white_check_mark:"+"\n"+":red_circle: **usuario expulso com sucesso** :white_check_mark:");
             guild.getController().kick(mentioned,(event.getAuthor().getAsMention()+reason)).queue();
             System.out.println("Kick event in:" + event.getGuild().getName()+" Channel: "+event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ mentioned);
+
 
         } catch (Exception e){
             event.reply("erro, verificar console");

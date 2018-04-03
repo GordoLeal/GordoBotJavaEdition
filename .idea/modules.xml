@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gordobot.iml" filepath="$PROJECT_DIR$/.idea/modules/gordobot.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gordobot_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" group="gordobot" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gordobot_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" group="gordobot" />
     </modules>
   </component>
 </project>

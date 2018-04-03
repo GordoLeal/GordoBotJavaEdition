@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class Main extends ListenerAdapter{
     public static void main(String[] args) throws LoginException, IOException, IllegalArgumentException, RateLimitedException {
-
         fileConfig fc = new fileConfig();
         String token = fc.fileConfig();
         String ownerId = fc.ownerId();
@@ -27,7 +26,8 @@ public class Main extends ListenerAdapter{
                 new teste(),
                 new desban(),
                 new help(),
-                new vamerda()
+                new vamerda(),
+                new say()
                 );
         client.setHelpWord(null);
         client.setGame(Game.playing("ONLINE"));
@@ -43,8 +43,6 @@ public class Main extends ListenerAdapter{
                     .buildAsync();
 
         }catch (Exception e){
-
-            System.out.println(e);
             System.out.println("PROBLEMAS NA CONEXÃO // ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?"+"\n"+"Script encerrado");
             return;
         }
