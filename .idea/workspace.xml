@@ -7,32 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_jna_4_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_jna_4_4_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_trove4j_trove4j_3_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_trove4j_trove4j_3_0_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot.iml" afterPath="$PROJECT_DIR$/.idea/modules/gordobot.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/commands/HelloWorld.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/commands/ban.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/commands/desban.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/commands/kick.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/commands/mudarstatus.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/commands/teste.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/fileConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelloWorld.java" afterPath="$PROJECT_DIR$/src/main/java/commands/HelloWorld.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ban.java" afterPath="$PROJECT_DIR$/src/main/java/commands/ban.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/desban.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/help.java" afterPath="$PROJECT_DIR$/src/main/java/commands/help.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/kick.java" afterPath="$PROJECT_DIR$/src/main/java/commands/kick.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/mudarstatus.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/sobre.java" afterPath="$PROJECT_DIR$/src/main/java/commands/sobre.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/vamerda.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileConfig.java" afterPath="$PROJECT_DIR$/src/main/java/fileConfig.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -1046,7 +1021,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522870085187</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="-comando help adicionado">
+      <created>1522881488001</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1522881488001</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1109,7 +1091,8 @@
     <MESSAGE value="..." />
     <MESSAGE value="adicionado comando say, conserto de bugs, preparação para uso em host" />
     <MESSAGE value="-Reforma completa no comando kick (expulsar)&#10;-comando help do JDA &quot;desativado&quot;&#10;-Novo comando help em breve" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Reforma completa no comando kick (expulsar)&#10;-comando help do JDA &quot;desativado&quot;&#10;-Novo comando help em breve" />
+    <MESSAGE value="-comando help adicionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="-comando help adicionado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
