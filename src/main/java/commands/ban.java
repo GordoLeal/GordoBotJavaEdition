@@ -16,7 +16,6 @@ public class ban extends Command{
         this.aliases = new String[]{"banir", "bane"};
         this.help = "Banir usuario do servidor";
         this.arguments = "<person> <reason>";
-
     }
 
     @Override
@@ -30,32 +29,23 @@ public class ban extends Command{
         String banned = comd[0];
 
         if(!author.hasPermission(Permission.BAN_MEMBERS)){
-
         event.reply("você não tem permissão para banir ninguém, contate o adiministrador do servidor");
         return;
         }
 
         if(event.getMessage().getMentionedMembers().isEmpty()){
-
             event.reply(author.getEffectiveName()+" Não encontrei essa pessoa, tem certeza que mencionou o nome corretamente?");
             return;
-
         }
 
         if(guild == null) {
-
             event.reply("Posso ser gordo porem não sou burro, você precisa executar esse comando no servidor");
             return;
         }
 
-
         try{
-
             reason = comd[1];
-
-
         }catch (Exception e){
-
             event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo, banimento será realizado sem descrição");
             reason = (event.getAuthor() + " realizou o banimento sem colocar o motivo");
         }
@@ -64,14 +54,10 @@ public class ban extends Command{
             event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention()+" :white_check_mark:");
             guild.getController().ban(mentioned.get(0),7,(event.getAuthor().getName()+reason)).queue();
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
-
         }catch (Exception e){
             event.reply("um erro aconteceu");
             return;
         }
-
         return;
     }
-
-
 }

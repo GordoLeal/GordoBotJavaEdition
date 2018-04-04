@@ -24,15 +24,13 @@ public class Main extends ListenerAdapter{
                 new kick(),
                 new ban(),
                 new teste(),
-                new desban(),
                 new help(),
-                new vamerda(),
                 new say(),
                 new sobre()
                 );
         client.setHelpWord("%JDAOldHelp%");
         client.useHelpBuilder(false);
-        client.setGame(Game.playing("ONLINE"));
+        client.setGame(Game.playing("e comendo biscoito"));
 
         try{
 

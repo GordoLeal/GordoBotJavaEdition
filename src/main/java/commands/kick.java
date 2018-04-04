@@ -41,14 +41,14 @@ public class kick extends Command {
         try{
             mentioned = event.getMessage().getMentionedMembers().get(0);
         }catch (IndexOutOfBoundsException e){
-            event.reply(event.getAuthor().getAsMention()+" você não mencionou ninguém.\n use: ``gordo expulsar @gordo#0865 , motivo(opcional)``");
+            event.reply(event.getAuthor().getAsMention()+" você não mencionou ninguém.\nUse: ``gordo expulsar @gordo#0865 , motivo(opcional)``");
             return;
         }
 
         if(event.getAuthor() == mentioned.getUser() || event.getMessage().getMentionedMembers().get(0).getUser().isBot()){
             EB.setAuthor("O usuario não foi expulso");
             EB.setTitle(":warning:");
-            EB.setDescription("Eu não vou expulsar bots ou a pessoa que invocou o comando.\n \n entre em contato com um administrador do servidor :face_palm: ");
+            EB.setDescription("Eu não vou expulsar bots ou a pessoa que invocou o comando.\n \nEntre em contato com um administrador do servidor :face_palm: ");
             EB.setColor(16657966);
             EB.setFooter("Commando executado por: "+event.getAuthor().getName(),event.getAuthor().getAvatarUrl());
             EB.setTimestamp(event.getMessage().getCreationTime());
@@ -88,7 +88,7 @@ public class kick extends Command {
             EB.addField("Motivo",EBR,false);
             EB.setThumbnail(mentioned.getUser().getAvatarUrl());
             event.reply(EB.build());
-            //guild.getController().kick(mentioned,(event.getAuthor().getAsMention()+reason)).queue();
+            guild.getController().kick(mentioned,(event.getAuthor().getAsMention()+reason)).queue();
 
         } catch (Exception e){
 
