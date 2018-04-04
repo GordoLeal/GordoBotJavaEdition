@@ -35,6 +35,20 @@ public class ban extends Command{
         return;
         }
 
+        if(event.getMessage().getMentionedMembers().isEmpty()){
+
+            event.reply(author.getEffectiveName()+" Não encontrei essa pessoa, tem certeza que mencionou o nome corretamente?");
+            return;
+
+        }
+
+        if(guild == null) {
+
+            event.reply("Posso ser gordo porem não sou burro, você precisa executar esse comando no servidor");
+            return;
+        }
+
+
         try{
 
             reason = comd[1];
@@ -45,23 +59,6 @@ public class ban extends Command{
             event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo, banimento será realizado sem descrição");
             reason = (event.getAuthor() + " realizou o banimento sem colocar o motivo");
         }
-
-
-        if(guild == null) {
-
-            event.reply("Posso ser gordo porem não sou burro, você precisa executar esse comando no servidor");
-            return;
-        }
-
-
-        if(event.getMessage().getMentionedMembers().isEmpty()){
-
-            event.reply(author.getEffectiveName()+" Não encontrei essa pessoa, tem certeza que mencionou o nome corretamente?");
-            return;
-
-        }
-
-
 
         try{
             event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention()+" :white_check_mark:");

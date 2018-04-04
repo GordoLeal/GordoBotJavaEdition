@@ -13,7 +13,7 @@ public class help extends Command {
 
     @Override
     public void execute(CommandEvent event){
-        event.reply("aaaaa");
+
 
     }
 }

@@ -15,15 +15,20 @@ public class say extends Command {
 
     @Override
     public void execute(CommandEvent event){
+        if(event.getAuthor().isBot()){
+            return;
+        }
+
         Member author = event.getMessage().getMember();
         String[] text = event.getArgs().split(";<>stop<>;");
         String textReply = text[0];
 
         if(event.getArgs().isEmpty()){
             event.reply("Falarei qualquer coisa que você pedir \n exemplo: gordo fale eu sou lindo");
+            return;
         }
 
-        event.reply(author.getAsMention()+":\n"+textReply);
+        event.reply(textReply+"\n \n" + author.getAsMention());
 
     }
 }

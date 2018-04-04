@@ -27,9 +27,11 @@ public class Main extends ListenerAdapter{
                 new desban(),
                 new help(),
                 new vamerda(),
-                new say()
+                new say(),
+                new sobre()
                 );
-        client.setHelpWord(null);
+        client.setHelpWord("%JDAOldHelp%");
+        client.useHelpBuilder(false);
         client.setGame(Game.playing("ONLINE"));
 
         try{
