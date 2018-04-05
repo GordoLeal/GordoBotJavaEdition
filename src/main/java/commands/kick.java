@@ -28,10 +28,10 @@ public class kick extends Command {
         Guild guild = event.getGuild();
         Member author = event.getMessage().getMember();
         String[] comd = event.getArgs().split(",");
-        String EBR = "";
-        String reason = "";
+        String EBR;
+        String reason;
         EmbedBuilder EB = new EmbedBuilder();
-        Member mentioned = null;
+        Member mentioned;
 
         if(!author.hasPermission(Permission.KICK_MEMBERS)){
             event.reply(event.getAuthor().getAsMention()+" você não tem permissão para expulsar ninguém");
@@ -79,7 +79,7 @@ public class kick extends Command {
         try{
             System.out.println("Kick event in:" + event.getGuild().getName()+" , Channel: "+event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" , id: "+ event.getAuthor().getId()+" , Banned user: "+ mentioned.getEffectiveName());
             EB.setAuthor("O usuario foi expulso");
-            EB.setTitle(":white_check_mark:"+ mentioned.getEffectiveName());
+            EB.setTitle(":white_check_mark: "+ mentioned.getEffectiveName());
             EB.setThumbnail(mentioned.getUser().getEffectiveAvatarUrl());
             EB.setColor(16657966);
             EB.setFooter("Commando executado por: "+event.getAuthor().getName(),event.getAuthor().getAvatarUrl());

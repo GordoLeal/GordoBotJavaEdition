@@ -22,12 +22,10 @@ public class help extends Command {
                 "``banir:   gordo banir @gordo#0865 , motivo (opcional)``\n"+
                 "``oi:   gordo oi``\n"+
                 "``fale:   gordo fale alguma coisa``\n"+
-                "``sobre:   gordo sobre``\n"+
-                "``sobre:   gordo ``\n");
+                "``sobre:   gordo sobre``\n");
         EB.setColor(65535);
         EB.setThumbnail(event.getSelfUser().getAvatarUrl());
-        event.reply(event.getAuthor().getAsMention()+" mandei os comandos na mensagem direta.");
+        event.reply(event.getAuthor().getAsMention()+" mandei os comandos na mensagem direta.\nCaso não tenha recebido, vai em configurações de privacidade e permitir receber mensagens diretas :eyes:");
         event.replyInDm(EB.build());
-        event.replyError(event.getAuthor().getAsMention()+" eu não posso mandar mensagens diretas para você, talvez você precise liberar esta opção nas configurações de privacidade :eyes:");
     }
 }

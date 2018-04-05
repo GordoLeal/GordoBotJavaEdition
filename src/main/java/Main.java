@@ -28,7 +28,6 @@ public class Main extends ListenerAdapter{
                 new say(),
                 new sobre()
                 );
-        client.setHelpWord("%JDAOldHelp%");
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo biscoito"));
 

@@ -2,6 +2,7 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
+import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Member;
@@ -20,40 +21,59 @@ public class ban extends Command{
 
     @Override
     public void execute(CommandEvent event){
-
-        Guild guild = event.getGuild();
-        Member author = event.getMessage().getMember();
-        List<Member> mentioned = event.getMessage().getMentionedMembers();
-        String[] comd = event.getArgs().split(",");
-        String reason = "";
-        String banned = comd[0];
-
-        if(!author.hasPermission(Permission.BAN_MEMBERS)){
-        event.reply("você não tem permissão para banir ninguém, contate o adiministrador do servidor");
-        return;
-        }
-
-        if(event.getMessage().getMentionedMembers().isEmpty()){
-            event.reply(author.getEffectiveName()+" Não encontrei essa pessoa, tem certeza que mencionou o nome corretamente?");
+        if(event.getAuthor().isBot()){
             return;
         }
 
-        if(guild == null) {
-            event.reply("Posso ser gordo porem não sou burro, você precisa executar esse comando no servidor");
+        if(!event.getMessage().getMember().hasPermission(Permission.BAN_MEMBERS)){//testar se a pessoa que executou o comando tem permissão de banir membros
+            event.reply(event.getAuthor().getAsMention()+" você não tem permissão para banir");
             return;
         }
 
-        try{
-            reason = comd[1];
+        if(!event.getGuild().getSelfMember().hasPermission(Permission.BAN_MEMBERS)){ //testar se o bot tem permissão para banir
+            event.reply(event.getAuthor().getAsMention()+" eu não tenho permissão para banir");
+            return;
+        }
+
+        //a partir dessa linha vai testar se usuario mencionado esta presente
+        Member mentioned;
+
+        try{//testar se foi mencionado algum usuario
+            mentioned = event.getMessage().getMentionedMembers().get(0);
         }catch (Exception e){
-            event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo, banimento será realizado sem descrição");
-            reason = (event.getAuthor() + " realizou o banimento sem colocar o motivo");
+            event.reply(event.getMessage().getMember().getEffectiveName()+" Não encontrei essa pessoa, tem certeza que mencionou o nome corretamente?\nEm caso de duvida você pode ver exemplos digitando gordo socorro");
+            //porque não testar com if? por que futuramente pretendo adicionar uma função que procure por nome ou id
+            return;
         }
 
-        try{
-            event.reply(author.getAsMention() + "** baniu o usuario: **" + mentioned.get(0).getAsMention()+" :white_check_mark:");
-            guild.getController().ban(mentioned.get(0),7,(event.getAuthor().getName()+reason)).queue();
+        //variaveis e etc...
+        Guild guild = event.getGuild();
+        Member messageAuthor = event.getMessage().getMember();
+        String[] comd = event.getArgs().split(",");
+        String reason;
+        String banned = comd[0];
+        EmbedBuilder EB = new EmbedBuilder();
+
+        try{// se a pessoa não colocar um motivo, um motivo default será gerado
+            reason = (messageAuthor.getEffectiveName()+"Baniu este usuario com o motivo: "+comd[1]);
+        }catch (Exception e){
+            event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo, um modelo default entrara no lugar");
+            reason = (messageAuthor.getEffectiveName() + " baniu "+ banned+" motivo não foi adicionado");
+        }
+
+        try{//tentar relizar banimento e reponder
+            EB.setAuthor("O usuario foi banido");
+            EB.setTitle(":white_check_mark: "+ mentioned.getEffectiveName());
+            EB.setThumbnail(mentioned.getUser().getEffectiveAvatarUrl());
+            EB.setColor(16657966);
+            EB.addField("Id:",mentioned.getUser().getId(),false);
+            EB.addField("Motivo",reason,false);
+            EB.setThumbnail(mentioned.getUser().getAvatarUrl());
+            EB.setFooter("Commando executado por: "+event.getAuthor().getName(),event.getAuthor().getAvatarUrl());
+            EB.setTimestamp(event.getMessage().getCreationTime());
+            event.reply(EB.build());
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
+            guild.getController().ban(mentioned,7,(event.getAuthor().getName()+reason)).queue();
         }catch (Exception e){
             event.reply("um erro aconteceu");
             return;
