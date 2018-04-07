@@ -26,7 +26,7 @@ public class teste extends Command {
 
     @Override
     public void execute(CommandEvent event){
-        String guildid = event.getGuild().getId();
+    /*  String guildid = event.getGuild().getId();
         String authorid = event.getAuthor().getId();
         String testePath = ("coinsystem"+"\\"+guildid+"\\"+authorid);
         String authorFile = (authorid+".txt");
@@ -55,5 +55,5 @@ public class teste extends Command {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    */}
 }

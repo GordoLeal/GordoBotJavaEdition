@@ -3,8 +3,6 @@ package commands;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.entities.Guild;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,6 +18,7 @@ public class bank extends Command {
         this.name = "bank";
         this.aliases = new String[]{"banco","cofrinho","cofre","dindin"};
         this.arguments = "<arguments>";
+        this.guildOnly = true;
     }
 
     public void execute(CommandEvent event){
@@ -27,10 +26,19 @@ public class bank extends Command {
             return;
         }
 
-        Guild guild = event.getGuild();
-
         if(event.getArgs().isEmpty()){
 
+        }
+        EmbedBuilder EB = new EmbedBuilder();
+        if(event.getArgs().split(",").equals("sobre")){
+            EB.setAuthor("O QUE É PIZZAS?");
+            EB.setTitle(":pizza:");
+            EB.setColor(14395649);
+            EB.setDescription("Pizzas é uma moeda que pode ser usada para comandos aleatorios (EM DESENVOLVIMENTO)");
+            EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
+            EB.setTimestamp(event.getMessage().getCreationTime());
+            event.reply(EB.build());
+            return;
         }
 
         String guildId = event.getGuild().getId();
@@ -39,7 +47,7 @@ public class bank extends Command {
         String authorFile = (authorId+".txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         File file = new File(finalPath);
-        EmbedBuilder EB = new EmbedBuilder();
+;
         file.mkdirs();
         String readFileGiveResult = "0";
         try {
@@ -54,12 +62,13 @@ public class bank extends Command {
 
             }
         }
-
         EB.setAuthor("Bem vindo ao Banco");
         EB.setTitle("Você tem:");
         EB.setDescription(readFileGiveResult + " pizzas");
+        EB.setColor(14395649);
+        EB.addField("Info:","Para mais informações digite ``gordo banco sobre``",false);
         EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
+        EB.setTimestamp(event.getMessage().getCreationTime());
         event.reply(EB.build());
-
     }
 }

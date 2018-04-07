@@ -10,6 +10,7 @@ public class say extends Command {
         this.aliases = new String[]{"fale","falar","diga"};
         this.arguments = "<text>";
         this.cooldown = 5;
+        this.guildOnly = false;
     }
 
 

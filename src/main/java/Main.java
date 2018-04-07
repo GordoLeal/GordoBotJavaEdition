@@ -31,7 +31,8 @@ public class Main extends ListenerAdapter{
                 new help(),
                 new say(),
                 new sobre(),
-                new bank()
+                new bank(),
+                new jogos()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo biscoito"));
