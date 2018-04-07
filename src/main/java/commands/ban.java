@@ -58,7 +58,7 @@ public class ban extends Command{
             reason = (messageAuthor.getEffectiveName()+"Baniu este usuario com o motivo: "+comd[1]);
         }catch (Exception e){
             event.reply(event.getAuthor().getAsMention()+" você não colocou um motivo, um modelo default entrara no lugar");
-            reason = (messageAuthor.getEffectiveName() + " baniu "+ banned+" motivo não foi adicionado");
+            reason = (messageAuthor.getEffectiveName() + " baniu este usuario e o motivo não foi adicionado");
         }
 
         try{//tentar relizar banimento e reponder

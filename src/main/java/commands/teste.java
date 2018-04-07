@@ -2,10 +2,14 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.entities.*;
-import net.dv8tion.jda.core.events.emote.EmoteAddedEvent;
-import net.dv8tion.jda.core.requests.Route;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collections;
+
 
 /*
  COMANDO PARA TESTE DE ARGUMENTOS E ETC... NÃO POSSUI OBJETIVO, APENAS PARA TESTES
@@ -22,31 +26,34 @@ public class teste extends Command {
 
     @Override
     public void execute(CommandEvent event){
-       String[] teste = event.getArgs().split(",");
-        Guild guild = event.getGuild();
-/*
-        if(event.getAuthor().isBot()){
-            return;
+        String guildid = event.getGuild().getId();
+        String authorid = event.getAuthor().getId();
+        String testePath = ("coinsystem"+"\\"+guildid+"\\"+authorid);
+        String authorFile = (authorid+".txt");
+        Path pathtxt = Paths.get(testePath + "\\" + authorFile);
+        File file = new File(testePath);
+        String str = "0";
+        byte[] strToBytes = str.getBytes();
+        try {
+            file.mkdirs();
+            Files.createFile(Paths.get(testePath + "\\" + authorFile));
+            event.reply("Arquivo criado");
+            Files.write(Paths.get(testePath + "\\" + authorFile), strToBytes);
+
+        }catch (Exception ignoredException){
+            event.reply("erro arquivo já criado");
         }
-        if(event.getArgs().isEmpty()){
-            event.reply("erro, argumento invalido");
-            return;
+
+        try {
+            String readfiletxt = Files.readAllLines(pathtxt).get(0);
+            int teste1 = Integer.parseInt(readfiletxt);
+            event.reply("entrada:"+teste1);
+            teste1 = teste1 - 100;
+            String teste2 = String.valueOf(teste1);
+            event.reply("saida:"+teste2);
+            Files.write(pathtxt, Collections.singleton(teste2));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        String teste1 = teste[0];
-        String teste2 = teste[1];
-
-        //event.getMessage().addReaction("U+2705").queue();
-        event.reply(teste1);
-        event.reply(teste2);
-    */
-
-        EmbedBuilder EB = new EmbedBuilder();
-        EB.setTitle(event.getAuthor().getName(),"http://twitch.tv/gordoleal");
-        EB.setImage(event.getAuthor().getAvatarUrl());
-        EB.setAuthor(event.getAuthor().getName());
-
-        EB.setThumbnail(event.getAuthor().getAvatarUrl());
-        EB.setColor(6602340);
-        event.reply(EB.build());
     }
 }

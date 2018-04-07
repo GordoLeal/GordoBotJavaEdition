@@ -5,6 +5,8 @@ import net.dv8tion.jda.core.*;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import sun.audio.AudioPlayer;
+
 import javax.security.auth.login.LoginException;
 import java.io.IOException;
 
@@ -12,11 +14,13 @@ import java.io.IOException;
 public class Main extends ListenerAdapter{
     public static void main(String[] args) throws LoginException, IOException, IllegalArgumentException, RateLimitedException {
         fileConfig fc = new fileConfig();
+        fc.generalConfig();
         String token = fc.fileConfig();
         String ownerId = fc.ownerId();
 
         EventWaiter waiter = new EventWaiter();
         CommandClientBuilder client = new CommandClientBuilder();
+
         client.setPrefix("gordo ");
         client.setOwnerId(ownerId); //ADICIONAR FUNÇÃO DE PROCURAR PELA OWNERID NA CONFIG.TXT, POR AGORA TO COM PREGUIÇA
         client.addCommands(
@@ -26,7 +30,8 @@ public class Main extends ListenerAdapter{
                 new teste(),
                 new help(),
                 new say(),
-                new sobre()
+                new sobre(),
+                new bank()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo biscoito"));
@@ -45,6 +50,8 @@ public class Main extends ListenerAdapter{
             System.out.println("PROBLEMAS NA CONEXÃO // ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?"+"\n"+"Script encerrado");
             return;
         }
+
+
 
     }
 
