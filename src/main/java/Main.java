@@ -32,10 +32,10 @@ public class Main extends ListenerAdapter{
                 new say(),
                 new sobre(),
                 new bank(),
-                new jogos()
+                new caçaniquel()
                 );
         client.useHelpBuilder(false);
-        client.setGame(Game.playing("e comendo biscoito"));
+        client.setGame(Game.playing("e comendo pizza"));
 
         try{
 

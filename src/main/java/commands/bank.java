@@ -17,7 +17,7 @@ public class bank extends Command {
     public bank(){
         this.name = "bank";
         this.aliases = new String[]{"banco","cofrinho","cofre","dindin"};
-        this.arguments = "<arguments>";
+        this.arguments = "<info>";
         this.guildOnly = true;
     }
 
@@ -26,11 +26,9 @@ public class bank extends Command {
             return;
         }
 
-        if(event.getArgs().isEmpty()){
-
-        }
+        String[] test = event.getArgs().split(" ");
         EmbedBuilder EB = new EmbedBuilder();
-        if(event.getArgs().split(",").equals("sobre")){
+        if(test[0].equals("info")){
             EB.setAuthor("O QUE É PIZZAS?");
             EB.setTitle(":pizza:");
             EB.setColor(14395649);
@@ -53,20 +51,23 @@ public class bank extends Command {
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);
         } catch (IOException e) {
+            event.reply(event.getAuthor().getAsMention()+" Parece que você não tem uma conta no banco, eu  estou criando uma para você.");
             String zero = "0";
             byte[] banknew = zero.getBytes();
             try {
                 Files.write(pathtxt, banknew);
                 Files.createFile(Paths.get(finalPath + "\\" + authorFile));
+
             }catch (Exception ignored){
 
             }
+            event.reply(event.getAuthor().getAsMention()+" pronto, agora você pode guardas suas pizzas no banco :yum: ");
         }
         EB.setAuthor("Bem vindo ao Banco");
         EB.setTitle("Você tem:");
         EB.setDescription(readFileGiveResult + " pizzas");
         EB.setColor(14395649);
-        EB.addField("Info:","Para mais informações digite ``gordo banco sobre``",false);
+        EB.addField("Info:","Para mais informações digite ``gordo banco info``",false);
         EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
         EB.setTimestamp(event.getMessage().getCreationTime());
         event.reply(EB.build());

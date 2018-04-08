@@ -13,7 +13,7 @@ COMANDO PARA EXPULSÃO DE USUARIO
 public class kick extends Command {
     public kick(){
         this.name = "kick";
-        this.aliases = new String[]{"expulse","expulsar","chutar","chute"};
+        this.aliases = new String[]{"expulse","expulsar","chutar","chute","expulsa","quica","kicka","kickar"};
         this.arguments = "<reason>";
         this.guildOnly = true;
     }
