@@ -51,7 +51,7 @@ public class bank extends Command {
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);
         } catch (IOException e) {
-            event.reply(event.getAuthor().getAsMention()+" Parece que você não tem uma conta no banco, eu  estou criando uma para você.");
+            event.reply(event.getAuthor().getAsMention()+" Parece que você não tem uma conta no banco, eu estou criando uma para você.");
             String zero = "0";
             byte[] banknew = zero.getBytes();
             try {
@@ -61,7 +61,7 @@ public class bank extends Command {
             }catch (Exception ignored){
 
             }
-            event.reply(event.getAuthor().getAsMention()+" pronto, agora você pode guardas suas pizzas no banco :yum: ");
+            event.reply(event.getAuthor().getAsMention()+" pronto, agora você pode guardar suas pizzas no banco :yum: ");
         }
         EB.setAuthor("Bem vindo ao Banco");
         EB.setTitle("Você tem:");

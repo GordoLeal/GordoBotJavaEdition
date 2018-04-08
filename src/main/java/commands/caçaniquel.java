@@ -17,7 +17,8 @@ public class caçaniquel extends Command {
     public caçaniquel(){
         this.name = "caça niquel";
         this.aliases = new String[]{"caçaniquel","caça-niquel","slotmachine","slot"};
-        this.cooldown = 10;
+        this.cooldown = 15;
+        this.guildOnly = true;
     }
 
     @Override
@@ -90,7 +91,6 @@ public class caçaniquel extends Command {
 
             if(result2 == ":salad:"){
                 EB.addField("Você ganhou:","nada... ninguem gosta de saladas",false);
-
                 event.reply(EB.build());
                 return;
             }
@@ -98,7 +98,7 @@ public class caçaniquel extends Command {
         }
 
         if (result1 == result2 || result2 == result3 || result1 == result3){
-            if(result2 == ":pizza:" || result1 ==":pizza:"){
+            if((result2 == ":pizza:" && result1 ==":pizza:")||(result2 == ":pizza:" && result3 == ":pizza:")||(result1 == ":pizza:" && result3 == ":pizza:")){
                 x = x + 50;
                 EB.addField("VOCÊ GANHOU: ","50 pizzas",false);
                 String fileout = String.valueOf(x);
@@ -109,7 +109,7 @@ public class caçaniquel extends Command {
                 return;
             }
 
-            if(result2 == ":chocolate_bar:"|| result1 == ":chocolate_bar:"){
+            if((result2 == ":chocolate_bar:" && result1 ==":chocolate_bar:")||(result2 == ":chocolate_bar:" && result3 == ":chocolate_bar:")||(result1 == ":chocolate_bar:" && result3 == ":chocolate_bar:")){
                 x = x + 25;
                 EB.addField("VOCÊ GANHOU: ","25 pizzas",false);
                 String fileout = String.valueOf(x);
@@ -120,7 +120,7 @@ public class caçaniquel extends Command {
                 return;
             }
 
-            if(result2 == ":hotdog:" || result1 ==":hotdog:"){
+            if((result2 == ":hotdog:" && result1 ==":hotdog:")||(result2 == ":hotdog:" && result3 == ":hotdog:")||(result1 == ":hotdog:" && result3 == ":hotdog:")){
                 x = x + 15;
                 EB.addField("VOCÊ GANHOU: ","15 pizzas",false);
                 String fileout = String.valueOf(x);
@@ -131,9 +131,8 @@ public class caçaniquel extends Command {
                 return;
             }
 
-            if(result2 == ":salad:"|| result1== ":salad:"){
+            if((result2 == ":salad:" && result1 ==":salad:")||(result2 == ":salad:" && result3 == ":salad:")||(result1 == ":salad:" && result3 == ":salad:")){
                 EB.addField("Você ganhou:","nada... ninguem gosta de saladas",false);
-
                 event.reply(EB.build());
                 return;
             }
