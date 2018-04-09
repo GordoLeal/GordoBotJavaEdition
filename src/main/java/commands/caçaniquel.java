@@ -34,7 +34,7 @@ public class caçaniquel extends Command {
         String result3 = randomList.get(random.nextInt(randomList.size()));
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
-        String finalPath = ("GeneralConfig"+"\\"+guildId+"\\"+authorId);
+        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
         String authorFile = (authorId+".txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         String readFileGiveResult;
