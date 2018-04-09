@@ -24,7 +24,7 @@ public class help extends Command {
                 "``fale:   gordo fale alguma coisa``\n"+
                 "``sobre:   gordo sobre``\n"+
                 "``banco:   gordo banco``\n"+
-                "``caçaniquel:  gordo caçaniquel");
+                "``caçaniquel:  gordo caçaniquel``");
         EB.setColor(65535);
         EB.setThumbnail(event.getSelfUser().getAvatarUrl());
         event.reply(event.getAuthor().getAsMention()+" mandei os comandos na mensagem direta.\nCaso não tenha recebido, vai em configurações de privacidade e permitir receber mensagens diretas :eyes:");
