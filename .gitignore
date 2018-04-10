@@ -1,7 +1,6 @@
 config.txt
 ownerId.txt
 token.txt
-.gitignore.txt
 out
 .idea
 .gradle

@@ -42,18 +42,18 @@ public class bank extends Command {
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
         String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
-        String authorFile = (authorId+".txt");
+        String authorFile = ("coinQuantity.txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         File file = new File(finalPath);
 ;
         file.mkdirs();
-        String readFileGiveResult = "0";
+        String readFileGiveResult = "100";
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);
         } catch (IOException e) {
             event.reply(event.getAuthor().getAsMention()+" Parece que você não tem uma conta no banco, eu estou criando uma para você.");
-            String zero = "0";
-            byte[] banknew = zero.getBytes();
+            String freeCoins = "100";
+            byte[] banknew = freeCoins.getBytes();
             try {
                 Files.write(pathtxt, banknew);
                 Files.createFile(Paths.get(finalPath + "\\" + authorFile));

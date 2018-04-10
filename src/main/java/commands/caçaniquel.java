@@ -19,51 +19,59 @@ public class caçaniquel extends Command {
         this.aliases = new String[]{"caçaniquel","caça-niquel","slotmachine","slot"};
         this.cooldown = 15;
         this.guildOnly = true;
+
     }
 
     @Override
-    public void execute(CommandEvent event){        EmbedBuilder EB = new EmbedBuilder();
-        Random random = new Random();
-        List<String> randomList = new ArrayList<>();
-        randomList.add(":pizza:");
-        randomList.add(":chocolate_bar:");
-        randomList.add(":hotdog:");
-        randomList.add(":salad:");
-        String result1 = randomList.get(random.nextInt(randomList.size()));
-        String result2 = randomList.get(random.nextInt(randomList.size()));
-        String result3 = randomList.get(random.nextInt(randomList.size()));
+    public void execute(CommandEvent event){//preparação do comando
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
-        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
-        String authorFile = (authorId+".txt");
-        Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         String readFileGiveResult;
-
-
+        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
+        String authorFile = ("coinQuantity.txt");
+        Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
+        //Ler arquivo e verificar se ele existe
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);
         } catch (IOException ignored) {
             event.reply(event.getAuthor().getAsMention()+" você ainda não criou uma conta no banco.\nDigite ``gordo banco`` para criar uma conta.");
             return;
         }
-
+        //transferir valor de string para integer e verificar se possui a quantidade necessaria
         int x = Integer.valueOf(readFileGiveResult);
+        if(x <= 25){
+            event.reply(event.getAuthor().getAsMention()+" você não possui pizzas suficientes para usar o caça-niquel\nExperimente pegar suas pizzas gratuitas, digite: ``gordo pizzasgratis``");
+            return;
+        }
+
+        x = x - 25;
+        EmbedBuilder EB = new EmbedBuilder();
+        Random random = new Random();
+        List<String> randomList = new ArrayList<>();
+        randomList.add(":pizza:");
+        randomList.add(":chocolate_bar:");  //cria a lista e adiciona os valores dentro da lista
+        randomList.add(":hotdog:");
+        randomList.add(":salad:");
+        String result1 = randomList.get(random.nextInt(randomList.size()));
+        String result2 = randomList.get(random.nextInt(randomList.size()));// nome aleatorio pego da lista sera colocado dentro dessas variaveis
+        String result3 = randomList.get(random.nextInt(randomList.size()));
         EB.setAuthor("CAÇA-NIQUEL");
         EB.setTitle("O RESULTADO É:");
         EB.setColor(14395649);
         EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
         EB.setTimestamp(event.getMessage().getCreationTime());
+        EB.addField("VOCÊ COMPROU UM TICKET","você gastou 25 pizzas para jogar",false);
 
-        EB.setDescription("["+result1+"]"+"["+result2+"]"+"["+result3+"]");
-        if(result1 == result2 && result2 == result3){
-            if(result2 == ":pizza:"){
-                x = x + 100;
-                EB.addField("VOCÊ GANHOU: ","100 pizzas",false);
-                String fileout = String.valueOf(x);
+        EB.setDescription("["+result1+"]"+"["+result2+"]"+"["+result3+"]");//criar um display do embed para mostrar os valores
+        if(result1 == result2 && result2 == result3){//verificar se todos os resultados aleatorios são iguais
+            if(result2 == ":pizza:"){//verificar o valor
+                x = x + 100; //somar o valor
+                EB.addField("VOCÊ GANHOU: ","100 pizzas",false);//adicionar um paragrafo no embed falando que ganhou e a quantidade
+                String fileout = String.valueOf(x);//transformar valor de volta em string
                 try {
-                    Files.write(pathtxt, Collections.singleton(fileout));
+                    Files.write(pathtxt, Collections.singleton(fileout));//colocar o valor dentro do arquivo
                 } catch (IOException ignored) { }
-                event.reply(EB.build());
+                event.reply(EB.build()); //contruir o embed e responder no chat que o comando foi chamado
                 return;
             }
 
@@ -79,8 +87,8 @@ public class caçaniquel extends Command {
             }
 
             if(result2 == ":hotdog:"){
-                x = x + 25;
-                EB.addField("VOCÊ GANHOU: ","25 pizzas",false);
+                x = x + 30;
+                EB.addField("VOCÊ GANHOU: ","30 pizzas",false);
                 String fileout = String.valueOf(x);
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));
@@ -88,9 +96,9 @@ public class caçaniquel extends Command {
                 event.reply(EB.build());
                 return;
             }
-
+            //no caso das saladas, não será adicionado valor, e assim nada sera feito na quantidade, apenas construir embed e responder
             if(result2 == ":salad:"){
-                EB.addField("Você ganhou:","nada... ninguem gosta de saladas",false);
+                EB.addField("VOCÊ GANHOU:","nada... ninguem gosta de saladas",false);
                 event.reply(EB.build());
                 return;
             }
@@ -132,7 +140,7 @@ public class caçaniquel extends Command {
             }
 
             if((result2 == ":salad:" && result1 ==":salad:")||(result2 == ":salad:" && result3 == ":salad:")||(result1 == ":salad:" && result3 == ":salad:")){
-                EB.addField("Você ganhou:","nada... ninguem gosta de saladas",false);
+                EB.addField("VOCÊ GANHOU:","nada... ninguem gosta de saladas",false);
                 event.reply(EB.build());
                 return;
             }
@@ -140,6 +148,5 @@ public class caçaniquel extends Command {
         EB.addField("uma pena!","tente novamente",false);
         event.reply(EB.build());
         return;
-
     }
 }

@@ -4,7 +4,9 @@ import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.exceptions.ErrorResponseException;
-
+/*
+    Comando que demonstra todos os comandos disponiveis (EM DESENVOLVIMENTO)
+*/
 public class help extends Command {
     public help(){
         this.name = "help";
@@ -24,7 +26,8 @@ public class help extends Command {
                 "``fale:   gordo fale alguma coisa``\n"+
                 "``sobre:   gordo sobre``\n"+
                 "``banco:   gordo banco``\n"+
-                "``caçaniquel:  gordo caçaniquel");
+                "``caçaniquel:  gordo caçaniquel``\n"+
+                "``pizzagratis:  gordo pizzagratis``");
         EB.setColor(65535);
         EB.setThumbnail(event.getSelfUser().getAvatarUrl());
         event.reply(event.getAuthor().getAsMention()+" mandei os comandos na mensagem direta.\nCaso não tenha recebido, vai em configurações de privacidade e permitir receber mensagens diretas :eyes:");

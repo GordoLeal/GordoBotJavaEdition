@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 public class fileConfig {
     public String generalConfig(){
         Path pathConfig = Paths.get("GeneralConfig");
-        System.out.println("OLHA EU AQUI");
+        System.out.println("INICIANDO VERIFICAÇÃO DE ARQUIVOS");
         File file = new File(String.valueOf(pathConfig));
 
         try{
@@ -28,8 +28,9 @@ public class fileConfig {
 
         try{
             Files.createFile(Paths.get(configpath));
+            System.out.println("ARQUIVO TXT CRIADO, PORFAVOR COLOCAR TOKEN DO BOT DENTRO DO ARQUIVO token.txt\n");
         }catch (Exception e){
-            System.out.print("token.txt já existe pulando criação\n");
+            System.out.println("token.txt já existe pulando criação\n");
         }
 
         String token = new String(Files.readAllBytes(Paths.get(configpath)));
@@ -41,6 +42,7 @@ public class fileConfig {
         String configpath = ("GeneralConfig\\ownerId.txt");
         try{
             Files.createFile(Paths.get(configpath));
+            System.out.println("ARQUIVOS ownerId CRIADO, PORFAVOR COLOCAR A ID DO USUARIO CONSIDERADO DONO DENTRO DO ARQUIVO ownerId.txt\n");
         }catch (Exception e){
             System.out.println("ownerid.txt já existe, pulando criação\n");
         }

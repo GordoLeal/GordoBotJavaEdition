@@ -32,7 +32,8 @@ public class Main extends ListenerAdapter{
                 new say(),
                 new sobre(),
                 new bank(),
-                new caçaniquel()
+                new caçaniquel(),
+                new daily()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo pizza"));
@@ -47,7 +48,7 @@ public class Main extends ListenerAdapter{
                     .setStatus(OnlineStatus.IDLE)
                     .buildAsync();
 
-        }catch (Exception e){
+        }catch (Exception e){ //caso a pasta token.txt esteja vazia, será exibido um error
             System.out.println("PROBLEMAS NA CONEXÃO // ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?"+"\n"+"Script encerrado");
             return;
         }
