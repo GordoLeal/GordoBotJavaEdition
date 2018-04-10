@@ -44,7 +44,7 @@ public class caçaniquel extends Command {
             return;
         }
 
-        x = x - 25;
+
         EmbedBuilder EB = new EmbedBuilder();
         Random random = new Random();
         List<String> randomList = new ArrayList<>();
@@ -60,7 +60,8 @@ public class caçaniquel extends Command {
         EB.setColor(14395649);
         EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
         EB.setTimestamp(event.getMessage().getCreationTime());
-        EB.addField("VOCÊ COMPROU UM TICKET","você gastou 25 pizzas para jogar",false);
+        EB.addField("VOCÊ COMPROU UM TICKET","você gastou 15 pizzas para jogar",false);
+        x = x - 15; //vai remover 15 pizzas do banco
 
         EB.setDescription("["+result1+"]"+"["+result2+"]"+"["+result3+"]");//criar um display do embed para mostrar os valores
         if(result1 == result2 && result2 == result3){//verificar se todos os resultados aleatorios são iguais
