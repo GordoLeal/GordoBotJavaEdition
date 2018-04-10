@@ -34,7 +34,7 @@ public class daily extends Command {
         }
         //pegar valor adicionar ao integer para poder ser modificavel
         int x = Integer.valueOf(readFileGiveResult);
-        event.reply(event.getAuthor().getAsMention()+" você ganhou 100 pizzas, você pode ganhar daqui a 2 horas. :pizza:");
+        event.reply(event.getAuthor().getAsMention()+" você ganhou 100 pizzas, você pode ganhar mais daqui a 2 horas. :pizza:");
         x = x + 100;
         String fileout = String.valueOf(x);
         try {

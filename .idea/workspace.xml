@@ -6,21 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="update 1.9.0&#10;adicionado">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/daily.java" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot.iml" afterPath="$PROJECT_DIR$/.idea/modules/gordobot.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" />
+    <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/bank.java" afterPath="$PROJECT_DIR$/src/main/java/commands/bank.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/caçaniquel.java" afterPath="$PROJECT_DIR$/src/main/java/commands/caçaniquel.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/help.java" afterPath="$PROJECT_DIR$/src/main/java/commands/help.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/sobre.java" afterPath="$PROJECT_DIR$/src/main/java/commands/sobre.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/teste.java" afterPath="$PROJECT_DIR$/src/main/java/commands/teste.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileConfig.java" afterPath="$PROJECT_DIR$/src/main/java/fileConfig.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/daily.java" afterPath="$PROJECT_DIR$/src/main/java/commands/daily.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -62,7 +50,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -118,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="daily.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/commands/daily.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="216">
+              <caret line="36" column="100" lean-forward="false" selection-start-line="36" selection-start-column="100" selection-end-line="36" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1203,7 +1191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523286521321</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update 1.9.0&#10;adicionado o comando pizzasgratis&#10;refeito o banco para custar 25 pizzas&#10;adicionado alguns detalhes para quem estiver lendo o codigo&#10;Correção de bugs&#10;Correção de erro no help(valeu bee)">
+      <created>1523390008345</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1523390008346</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1306,7 +1301,8 @@
     <MESSAGE value="introdução do comando CaçaNiquel&#10;conserto de bugs" />
     <MESSAGE value="push que esqueci" />
     <MESSAGE value="leves mudanças" />
-    <option name="LAST_COMMIT_MESSAGE" value="leves mudanças" />
+    <MESSAGE value="update 1.9.0&#10;adicionado o comando pizzasgratis&#10;refeito o banco para custar 25 pizzas&#10;adicionado alguns detalhes para quem estiver lendo o codigo&#10;Correção de bugs&#10;Correção de erro no help(valeu bee)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 1.9.0&#10;adicionado o comando pizzasgratis&#10;refeito o banco para custar 25 pizzas&#10;adicionado alguns detalhes para quem estiver lendo o codigo&#10;Correção de bugs&#10;Correção de erro no help(valeu bee)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1517,13 +1513,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/daily.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,11 +1529,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/daily.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="216">
+          <caret line="36" column="100" lean-forward="false" selection-start-line="36" selection-start-column="100" selection-end-line="36" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
