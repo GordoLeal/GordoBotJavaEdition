@@ -26,6 +26,7 @@ public class daily extends Command {
         Path pathtxt = Paths.get(finalPath);
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);
+            cooldown = 7200;
             //verificar se a pessoa tem uma conta no banco (se o arquivo foi criado)
         } catch (IOException ignored) {
             event.reply(event.getAuthor().getAsMention()+" você ainda não criou uma conta no banco.\nDigite ``gordo banco`` para criar uma conta.");

@@ -16,7 +16,7 @@ COMANDO PARA VER QUANTO TEM DE PIZZAS NA CONTA
 public class bank extends Command {
     public bank(){
         this.name = "bank";
-        this.aliases = new String[]{"banco","cofrinho","cofre","dindin"};
+        this.aliases = new String[]{"banco","cofrinho","cofre","dindin","conta"};
         this.arguments = "<info>";
         this.guildOnly = true;
     }

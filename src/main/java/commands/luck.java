@@ -19,6 +19,7 @@ public class luck extends Command{
         this.aliases = new String[]{"sorte","apostar","aposta"};
         this.arguments = "<quantity>";
         this.guildOnly = true;
+        this.cooldown = 15;
     }
     @Override
     protected void execute(CommandEvent event) {
@@ -57,7 +58,7 @@ public class luck extends Command{
         EmbedBuilder EB = new EmbedBuilder();
 
         if(event.getArgs().isEmpty()){
-            event.reply(event.getAuthor().getAsMention()+" você precisa adicionar um valor para ser apostado valido\nExemplo: Gordo sorte 69.");
+            event.reply(event.getAuthor().getAsMention()+" você precisa adicionar um valor para ser apostado valido\nExemplo: ``Gordo sorte 69``");
             return;
         }else {
             try {
@@ -73,7 +74,7 @@ public class luck extends Command{
         }
 
         if(banco < apostado){
-            event.reply(event.getAuthor().getAsMention() + "você não tem "+ apostado +" no banco.");
+            event.reply(event.getAuthor().getAsMention() + " você não tem "+ apostado +" no banco.");
             return;
         }
 
