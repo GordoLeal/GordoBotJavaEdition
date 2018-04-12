@@ -105,7 +105,12 @@ public class luck extends Command{
 
             case 2:// carrot (nothing)
                 EB.setDescription(":carrot: CENOURA! hm.. ok..");
-                EB.addField("QUE AZAR!","ninguem gosta de cenoura, você ganhou nada.",false);
+                EB.addField("QUE AZAR!","você perdeu o que apostou e não ganhou nada.",false);
+                if(banco < apostado){
+                    banco = banco - banco;
+                }else {
+                    banco = banco - apostado;
+                }
                 output = String.valueOf(banco);
                 break;
 
