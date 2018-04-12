@@ -7,20 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/log.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/luck.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/ping.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelloWorld.java" afterPath="$PROJECT_DIR$/src/main/java/commands/HelloWorld.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ban.java" afterPath="$PROJECT_DIR$/src/main/java/commands/ban.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/bank.java" afterPath="$PROJECT_DIR$/src/main/java/commands/bank.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/help.java" afterPath="$PROJECT_DIR$/src/main/java/commands/help.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/jogos.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/kick.java" afterPath="$PROJECT_DIR$/src/main/java/commands/kick.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/sobre.java" afterPath="$PROJECT_DIR$/src/main/java/commands/sobre.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/teste.java" afterPath="$PROJECT_DIR$/src/main/java/commands/teste.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -187,6 +174,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -1243,7 +1236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523450278874</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="-Novos comandos&#10;-ping&#10;-apostar&#10;-Refeito o comando Help">
+      <created>1523547019717</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1523547019717</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1348,7 +1348,8 @@
     <MESSAGE value="leves mudanças" />
     <MESSAGE value="update 1.9.0&#10;adicionado o comando pizzasgratis&#10;refeito o banco para custar 25 pizzas&#10;adicionado alguns detalhes para quem estiver lendo o codigo&#10;Correção de bugs&#10;Correção de erro no help(valeu bee)" />
     <MESSAGE value="conserto de erros ortograficos&#10;#eusouburro" />
-    <option name="LAST_COMMIT_MESSAGE" value="conserto de erros ortograficos&#10;#eusouburro" />
+    <MESSAGE value="-Novos comandos&#10;-ping&#10;-apostar&#10;-Refeito o comando Help" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Novos comandos&#10;-ping&#10;-apostar&#10;-Refeito o comando Help" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
