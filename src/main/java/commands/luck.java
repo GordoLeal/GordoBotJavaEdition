@@ -80,7 +80,7 @@ public class luck extends Command{
 
         EB.setAuthor("QUE COMECEM AS APOSTAS!");
         EB.setTitle("O SEU RESULTADO FOI:");
-        EB.setFooter("Commando executado por:" + event.getAuthor().getName(), event.getAuthor().getEffectiveAvatarUrl());
+        EB.setFooter("Commando executado por: " + event.getAuthor().getName(), event.getAuthor().getEffectiveAvatarUrl());
         EB.setTimestamp(event.getMessage().getCreationTime());
         EB.setColor(3801567);
 

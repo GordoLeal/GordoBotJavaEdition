@@ -57,7 +57,7 @@ public class caçaniquel extends Command {
         String result3 = randomList.get(random.nextInt(randomList.size()));
         EB.setAuthor("CAÇA-NIQUEL");
         EB.setTitle("O RESULTADO É:");
-        EB.setColor(14395649);
+        EB.setColor(3801567);
         EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
         EB.setTimestamp(event.getMessage().getCreationTime());
         EB.addField("VOCÊ COMPROU UM TICKET","você gastou 15 pizzas para jogar",false);
