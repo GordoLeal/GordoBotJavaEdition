@@ -71,6 +71,7 @@ public class luck extends Command{
 
         if(apostado <= 0){
             event.reply(event.getAuthor().getAsMention()+" você não pode apostar se não colocar dinheiro na aposta.");
+            return;
         }
 
         if(banco < apostado){
