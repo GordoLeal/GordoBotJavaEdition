@@ -11,7 +11,7 @@ public class HelloWorld extends Command {
     public HelloWorld(){
         this.name ="oi";
         this.aliases = new String[]{"iai","eae","opa","beleza","blz?","blz","beleza?","coé","coe"};
-        this.help ="responde com oi";
+        this.guildOnly = false;
     }
 
     @Override

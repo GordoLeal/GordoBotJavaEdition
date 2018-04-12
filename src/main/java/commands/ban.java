@@ -74,6 +74,7 @@ public class ban extends Command{
             event.reply(EB.build());
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
             guild.getController().ban(mentioned,7,(event.getAuthor().getName()+reason)).queue();
+            event.getMessage().delete();
         }catch (Exception e){
             event.reply("um erro aconteceu");
             return;

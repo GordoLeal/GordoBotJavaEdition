@@ -1,12 +1,10 @@
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
-import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.*;
 import net.dv8tion.jda.core.*;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-import sun.audio.AudioPlayer;
 
 import javax.security.auth.login.LoginException;
 import java.io.IOException;
@@ -33,7 +31,9 @@ public class Main extends ListenerAdapter{
                 new sobre(),
                 new bank(),
                 new caçaniquel(),
-                new daily()
+                new daily(),
+                new luck(),
+                new ping()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo pizza"));

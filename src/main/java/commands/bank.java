@@ -45,7 +45,7 @@ public class bank extends Command {
         String authorFile = ("coinQuantity.txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         File file = new File(finalPath);
-;
+
         file.mkdirs();
         String readFileGiveResult = "100";
         try {

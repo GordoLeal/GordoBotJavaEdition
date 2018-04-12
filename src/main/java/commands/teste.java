@@ -2,13 +2,8 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import com.jagrosh.jdautilities.doc.standard.CommandInfo;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Collections;
+import java.util.Random;
 /*
     COMANDO TESTE, É APENAS UTILIZADO PARA TESTAR COMANDOS ANTES DE CRIAR A SUA EXTRURA
 
@@ -17,13 +12,14 @@ import java.util.Collections;
 public class teste extends Command {
     public teste(){
         this.name = "teste";
-        this.arguments = "<teste>";
-        this.cooldown = 86400;
+        this.arguments = "[teste1],[teste2]";
+        this.cooldown = 0;
         this.ownerCommand = true;
     }
 
     @Override
     public void execute(CommandEvent event){
+      /*
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
         String readFileGiveResult;
@@ -44,6 +40,11 @@ public class teste extends Command {
             Files.write(pathtxt, Collections.singleton(fileout));
         } catch (IOException ignored) { }
         return;
+                channel.sendMessage("Ping!").queue( (message) ->
+         message.editMessageFormat("Pong! - "+"Discord API Ping: "+event.getJDA().getPing()+"ms - Ping: %dms", System.currentTimeMillis() - time).queue());
+}
+    */
+     // event.getChannel().sendMessage("pong!").queue(message -> message.editMessage("pong! "+event.getJDA().getPing()+" ms").queue());
     }
 
 }

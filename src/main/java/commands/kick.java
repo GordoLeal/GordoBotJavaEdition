@@ -89,6 +89,7 @@ public class kick extends Command {
             EB.setThumbnail(mentioned.getUser().getAvatarUrl());
             event.reply(EB.build());
             guild.getController().kick(mentioned,(event.getAuthor().getAsMention()+reason)).queue();
+            event.getMessage().delete();
 
         } catch (Exception e){
 
