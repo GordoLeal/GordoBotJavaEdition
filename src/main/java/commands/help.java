@@ -22,17 +22,6 @@ public class help extends Command {
         String helparg = event.getArgs();
 
         EB.setTitle("Lista de comandos:");
-<<<<<<< HEAD
-=======
-        EB.setDescription("``help``\n"+
-                "``expulse:   gordo expulse @gordo#0865 , motivo(opcional)``\n"+
-                "``banir:   gordo banir @gordo#0865 , motivo (opcional)``\n"+
-                "``oi:   gordo oi``\n"+
-                "``fale:   gordo fale alguma coisa``\n"+
-                "``sobre:   gordo sobre``\n"+
-                "``banco:   gordo banco``\n"+
-                "``caçaniquel:  gordo caçaniquel``");
->>>>>>> 825ea6ad7b187b5525be64e2b2a919e27faa32fd
         EB.setColor(65535);
         EB.setAuthor("Precisa de ajuda com alguma coisa?");
         EB.setThumbnail(event.getSelfUser().getAvatarUrl());
