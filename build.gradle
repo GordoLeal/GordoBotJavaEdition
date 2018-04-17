@@ -6,7 +6,7 @@ allprojects {
     sourceCompatibility = 1.8
 }
 
-
+task stage(dependsOn: ['build', 'clean'])
 repositories {
     mavenCentral()
     jcenter()
