@@ -80,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -374,8 +374,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4568860050315" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1315857121" />
+        <entry key="$PROJECT_DIR$" value="4568860176954" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="272804104" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="829777938" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2133169376" />
       </map>
@@ -1245,7 +1245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523978131280</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="-correção de erros com o gradle">
+      <created>1523978549369</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1523978549369</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1594,7 +1601,7 @@
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
