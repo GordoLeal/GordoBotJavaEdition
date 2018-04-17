@@ -34,9 +34,19 @@ public class daily extends Command {
         }
         //pegar valor adicionar ao integer para poder ser modificavel
         int x = Integer.valueOf(readFileGiveResult);
-        event.reply(event.getAuthor().getAsMention()+" você ganhou 100 pizzas, você pode ganhar mais daqui a 2 horas. :pizza:");
-        x = x + 100;
         String fileout = String.valueOf(x);
+        x = x + 100;
+        if(x <= (-1)){
+            event.reply(event.getAuthor().getAsMention()+" :warning: ALERTA!:warning: VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!");
+            x = 2147483647;
+            fileout = String.valueOf(x);
+            try {
+                Files.write(pathtxt, Collections.singleton(fileout));
+            } catch (IOException ignored) { }
+            return;
+        }
+        event.reply(event.getAuthor().getAsMention()+" você ganhou 100 pizzas, você pode ganhar mais daqui a 2 horas. :pizza:");
+
         try {
             Files.write(pathtxt, Collections.singleton(fileout));
         } catch (IOException ignored) { }

@@ -3,5 +3,6 @@ ownerId.txt
 token.txt
 out
 .idea
+.gradle
 META-INF
 GeneralConfig

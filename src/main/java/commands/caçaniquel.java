@@ -181,9 +181,7 @@ public class caçaniquel extends Command {
 
             if((result2 == ":salad:" && result1 ==":salad:")||(result2 == ":salad:" && result3 == ":salad:")||(result1 == ":salad:" && result3 == ":salad:")){
                 EB.addField("VOCÊ GANHOU:","nada... ninguem gosta de saladas",false);
-                event.reply(EB.build());
                 String fileout = String.valueOf(x);
-                event.reply(String.valueOf(fileout));
                 if(x <= (-1)){
                     EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
                     x = 2147483647;

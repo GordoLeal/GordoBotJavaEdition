@@ -86,21 +86,22 @@ public class luck extends Command{
         EB.setColor(3801567);
 
         switch (result1){
-            case 0:// pizza (3x)
+            case 0:// pizza (2x)
                 EB.setDescription(":pizza: PIZZA! quem não gosta de pizza? ");
-                x = apostado * 3;
-                EB.addField("VOCÊ GANHOU:",apostado+"(3x) pizzas.",false);
+                x = apostado * 2;
+                EB.addField("VOCÊ GANHOU:",apostado+"(2x) pizzas.",false);
                 EB.addField("NO TOTAL:",x+" pizzas.", false);
                 banco = banco + x;
                 output = String.valueOf(banco);
                 break;
 
-            case 1://chocolate (2x)
+            case 1://chocolate (ganhar a metade que o jogador colocou na aposta)
                 EB.setDescription(":chocolate_bar: CHOCOLATE! :yum:");
-                x = apostado * 2;
-                EB.addField("VOCÊ GANHOU:",apostado+"(2x) pizzas ",false);
-                EB.addField("NO TOTAL:",x+" pizzas", false);
-                banco = x + banco;
+                x = apostado/2;
+                EB.addField("VOCÊ GANHOU:","você ganhou o que apostou e mais "+x+" pizzas.",false);
+                x = apostado + x;
+                EB.addField("NO TOTAL:","você ganhou "+x+" pizzas",false);
+                banco = banco + x;
                 output = String.valueOf(banco);
                 break;
 

@@ -37,7 +37,8 @@ public class Main extends ListenerAdapter{
                 new luck(),
                 new ping(),
                 new editCoins(),
-                new restart()
+                new restart(),
+                new updates()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo pizza"));

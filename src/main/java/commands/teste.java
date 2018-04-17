@@ -18,6 +18,7 @@ public class teste extends Command {
 
     @Override
     public void execute(CommandEvent event){
+        event.reply(String.valueOf(Integer.MAX_VALUE));
 
     }
 
