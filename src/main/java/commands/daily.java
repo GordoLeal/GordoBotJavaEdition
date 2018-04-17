@@ -46,7 +46,7 @@ public class daily extends Command {
             return;
         }
         event.reply(event.getAuthor().getAsMention()+" você ganhou 100 pizzas, você pode ganhar mais daqui a 2 horas. :pizza:");
-
+        fileout = String.valueOf(x);
         try {
             Files.write(pathtxt, Collections.singleton(fileout));
         } catch (IOException ignored) { }
