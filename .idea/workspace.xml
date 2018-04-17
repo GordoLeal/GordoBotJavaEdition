@@ -79,8 +79,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -374,8 +374,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4568859618922" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="272804104" />
+        <entry key="$PROJECT_DIR$" value="4568860050315" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1315857121" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="829777938" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2133169376" />
       </map>
@@ -1238,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523977435324</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="-correção de erros com o gradle">
+      <created>1523978131280</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1523978131280</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1325,7 +1332,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removendo detalhe de ounerid" />
     <MESSAGE value="Organização de arquivos e descrição de algumas besteiras" />
     <MESSAGE value="detalhes em falta" />
     <MESSAGE value="correção de bugs e adição de descrição" />
@@ -1350,7 +1356,8 @@
     <MESSAGE value="quantos bugs isso ainda vai ter?" />
     <MESSAGE value="corrigido bug que poderia resultar em dinheiro (pizzas) infinito" />
     <MESSAGE value="-correção de bugs&#10;-comando restart&#10;-versão 2.2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="-correção de bugs&#10;-comando restart&#10;-versão 2.2.0" />
+    <MESSAGE value="-correção de erros com o gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="-correção de erros com o gradle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1586,8 +1593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>
