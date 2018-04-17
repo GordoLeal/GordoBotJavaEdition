@@ -1,12 +1,10 @@
 version '2.2.0'
 
-
 allprojects {
     apply plugin: 'java'
     sourceCompatibility = 1.8
 }
 
-task stage(dependsOn: ['build', 'clean'])
 repositories {
     mavenCentral()
     jcenter()
