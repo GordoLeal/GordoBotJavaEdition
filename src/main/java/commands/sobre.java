@@ -26,7 +26,7 @@ public class sobre extends Command {
         BD.addField("Sobre","Eu fui desenvolvido para o meu criador praticar a linguagem de programação em JAVA\n",false);
         BD.addField("API","Eu sou programado com uma api chamada JDA(Java Discord API)\n",false);
         BD.addField("Criador","O meu criador é um completo retardado que não entende quase nada de Java, estou surpreso pelo fato dele não ter pego fogo até hoje. \n",false);
-        BD.addField("Versão", "2.0.0",false);
+        BD.addField("Versão", "2.2.0",false);
         BD.setThumbnail(event.getSelfUser().getAvatarUrl());
         BD.setTimestamp(event.getMessage().getCreationTime());
         BD.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getAvatarUrl());

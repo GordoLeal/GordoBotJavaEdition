@@ -41,13 +41,38 @@ public class bank extends Command {
 
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
-        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
+        String finalPath = ("GeneralConfig\\Data\\"+guildId+"\\"+authorId);
         String authorFile = ("coinQuantity.txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         File file = new File(finalPath);
 
         file.mkdirs();
         String readFileGiveResult = "100";
+
+        if(!event.getMessage().getMentionedMembers().isEmpty()){
+            authorId = event.getMessage().getMentionedMembers().get(0).getUser().getId();
+            finalPath = ("GeneralConfig\\Data\\"+guildId+"\\"+authorId);
+            authorFile = ("coinQuantity.txt");
+            pathtxt = Paths.get(finalPath + "\\" + authorFile);
+            try {
+                readFileGiveResult = Files.readAllLines(pathtxt).get(0);
+            } catch (IOException ignored) {
+                event.reply(event.getAuthor().getAsMention()+" este usuario não possui uma conta do banco");
+                return;
+            }
+            EB.setAuthor("\uD83D\uDCB0 Bem vindo ao Banco");
+            EB.setTitle(event.getMessage().getMentionedMembers().get(0).getEffectiveName()+" tem:");
+            EB.setDescription(readFileGiveResult + " pizzas");
+            EB.setColor(14395649);
+            EB.addField("Info:","Para mais informações digite ``gordo banco info``",false);
+            EB.setFooter("Comando executado por: "+event.getAuthor().getName(),event.getAuthor().getEffectiveAvatarUrl());
+            EB.setTimestamp(event.getMessage().getCreationTime());
+            EB.setThumbnail(event.getMessage().getMentionedMembers().get(0).getUser().getEffectiveAvatarUrl());
+            event.reply(EB.build());
+            return;
+        }
+
+
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);
         } catch (IOException e) {
@@ -63,7 +88,8 @@ public class bank extends Command {
             }
             event.reply(event.getAuthor().getAsMention()+" pronto, agora você pode guardar suas pizzas no banco :yum: ");
         }
-        EB.setAuthor("Bem vindo ao Banco");
+
+        EB.setAuthor("\uD83D\uDCB0 Bem vindo ao Banco");
         EB.setTitle("Você tem:");
         EB.setDescription(readFileGiveResult + " pizzas");
         EB.setColor(14395649);

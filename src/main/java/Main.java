@@ -3,8 +3,10 @@ import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.*;
 import net.dv8tion.jda.core.*;
 import net.dv8tion.jda.core.entities.Game;
+import net.dv8tion.jda.core.entities.Webhook;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import net.dv8tion.jda.webhook.WebhookClientBuilder;
 
 import javax.security.auth.login.LoginException;
 import java.io.IOException;
@@ -33,7 +35,9 @@ public class Main extends ListenerAdapter{
                 new caçaniquel(),
                 new daily(),
                 new luck(),
-                new ping()
+                new ping(),
+                new editCoins(),
+                new restart()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo pizza"));
@@ -47,6 +51,7 @@ public class Main extends ListenerAdapter{
                     .setGame(Game.playing("REINICIANDO"))
                     .setStatus(OnlineStatus.IDLE)
                     .buildAsync();
+
 
         }catch (Exception e){ //caso a pasta token.txt esteja vazia, será exibido um error
             System.out.println("PROBLEMAS NA CONEXÃO // ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?"+"\n"+"Script encerrado");

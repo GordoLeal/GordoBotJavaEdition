@@ -29,10 +29,10 @@ public class luck extends Command{
         }
 
         //ler arquvio
-        String readFileGiveResult = "1";
+        String readFileGiveResult;
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
-        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
+        String finalPath = ("GeneralConfig\\Data\\"+guildId+"\\"+authorId);
         String authorFile = ("coinQuantity.txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
 
@@ -128,6 +128,12 @@ public class luck extends Command{
                 }
                 output = String.valueOf(banco);
                 break;
+        }
+
+        if(banco <= (-1)){
+            EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+            banco = 2147483647;
+            output = String.valueOf(banco);
         }
 
         event.reply(EB.build());

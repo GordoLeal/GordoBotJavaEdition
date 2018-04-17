@@ -2,7 +2,6 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,7 +21,7 @@ public class daily extends Command {
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
         String readFileGiveResult;//pegar o caminho e adicionar ao path
-        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId+"\\coinQuantity.txt");
+        String finalPath = ("GeneralConfig\\Data\\"+guildId+"\\"+authorId+"\\coinQuantity.txt");
         Path pathtxt = Paths.get(finalPath);
         try {
             readFileGiveResult = Files.readAllLines(pathtxt).get(0);

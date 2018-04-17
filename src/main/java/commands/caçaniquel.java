@@ -3,7 +3,6 @@ package commands;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.EmbedBuilder;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -27,7 +26,7 @@ public class caçaniquel extends Command {
         String guildId = event.getGuild().getId();
         String authorId = event.getAuthor().getId();
         String readFileGiveResult;
-        String finalPath = ("GeneralConfig\\coinSystem\\"+guildId+"\\"+authorId);
+        String finalPath = ("GeneralConfig\\Data\\"+guildId+"\\"+authorId);
         String authorFile = ("coinQuantity.txt");
         Path pathtxt = Paths.get(finalPath + "\\" + authorFile);
         //Ler arquivo e verificar se ele existe
@@ -69,6 +68,11 @@ public class caçaniquel extends Command {
                 x = x + 100; //somar o valor
                 EB.addField("VOCÊ GANHOU: ","100 pizzas",false);//adicionar um paragrafo no embed falando que ganhou e a quantidade
                 String fileout = String.valueOf(x);//transformar valor de volta em string
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));//colocar o valor dentro do arquivo
                 } catch (IOException ignored) { }
@@ -80,6 +84,11 @@ public class caçaniquel extends Command {
                 x = x + 50;
                 EB.addField("VOCÊ GANHOU: ","50 pizzas",false);
                 String fileout = String.valueOf(x);
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));
                 } catch (IOException ignored) { }
@@ -91,6 +100,11 @@ public class caçaniquel extends Command {
                 x = x + 30;
                 EB.addField("VOCÊ GANHOU: ","30 pizzas",false);
                 String fileout = String.valueOf(x);
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));
                 } catch (IOException ignored) { }
@@ -100,6 +114,16 @@ public class caçaniquel extends Command {
             //no caso das saladas, não será adicionado valor, e assim nada sera feito na quantidade, apenas construir embed e responder
             if(result2 == ":salad:"){
                 EB.addField("VOCÊ GANHOU:","nada... ninguem gosta de saladas",false);
+                event.reply(EB.build());
+                String fileout = String.valueOf(x);
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
+                try {
+                    Files.write(pathtxt, Collections.singleton(fileout));
+                } catch (IOException ignored) { }
                 event.reply(EB.build());
                 return;
             }
@@ -111,6 +135,11 @@ public class caçaniquel extends Command {
                 x = x + 50;
                 EB.addField("VOCÊ GANHOU: ","50 pizzas",false);
                 String fileout = String.valueOf(x);
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));
                 } catch (IOException ignored) { }
@@ -122,6 +151,11 @@ public class caçaniquel extends Command {
                 x = x + 25;
                 EB.addField("VOCÊ GANHOU: ","25 pizzas",false);
                 String fileout = String.valueOf(x);
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));
                 } catch (IOException ignored) { }
@@ -133,6 +167,11 @@ public class caçaniquel extends Command {
                 x = x + 15;
                 EB.addField("VOCÊ GANHOU: ","15 pizzas",false);
                 String fileout = String.valueOf(x);
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
                 try {
                     Files.write(pathtxt, Collections.singleton(fileout));
                 } catch (IOException ignored) { }
@@ -143,9 +182,27 @@ public class caçaniquel extends Command {
             if((result2 == ":salad:" && result1 ==":salad:")||(result2 == ":salad:" && result3 == ":salad:")||(result1 == ":salad:" && result3 == ":salad:")){
                 EB.addField("VOCÊ GANHOU:","nada... ninguem gosta de saladas",false);
                 event.reply(EB.build());
+                String fileout = String.valueOf(x);
+                event.reply(String.valueOf(fileout));
+                if(x <= (-1)){
+                    EB.addField(":warning: ALERTA!:warning: ","VOCÊ PASSOU DO LIMITE MAXIMO DA CONTA E TEVE QUE PAGAR IMPOSTOS!",false);
+                    x = 2147483647;
+                    fileout = String.valueOf(x);
+                }
+                try {
+                    Files.write(pathtxt, Collections.singleton(fileout));
+                } catch (IOException ignored) { }
+                event.reply(EB.build());
                 return;
             }
         }
+
+
+
+        String fileout = String.valueOf(x);
+        try {
+            Files.write(pathtxt, Collections.singleton(fileout));
+        } catch (IOException ignored) { }
         EB.addField("uma pena!","tente novamente",false);
         event.reply(EB.build());
         return;

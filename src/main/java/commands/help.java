@@ -3,7 +3,6 @@ package commands;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.exceptions.ErrorResponseException;
 /*
     Comando que demonstra todos os comandos disponiveis (EM DESENVOLVIMENTO)
 */
@@ -67,8 +66,8 @@ public class help extends Command {
                 break;
             case "banco":
                 EB.setTitle("commando: banco (bank / cofrinho / cofre / dindin)");
-                EB.setDescription("Cria sua conta no banco e/ou informa quanto você tem guardado");
-                EB.addField("exemplo","gordo banco",false);
+                EB.setDescription("Cria sua conta no banco e/ou informa quanto você ou a pessoa que você mencionou tem no banco");
+                EB.addField("exemplo","``gordo banco`` ou ``gordo banco @gordo#0865``",false);
                 event.replyInDm(EB.build());
                 break;
             case "caçaniquel":
