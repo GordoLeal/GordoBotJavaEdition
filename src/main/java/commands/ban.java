@@ -71,14 +71,23 @@ public class ban extends Command{
             EB.setThumbnail(mentioned.getUser().getAvatarUrl());
             EB.setFooter("Commando executado por: "+event.getAuthor().getName(),event.getAuthor().getAvatarUrl());
             EB.setTimestamp(event.getMessage().getCreationTime());
-            event.reply(EB.build());
             System.out.println("Ban event in:" + event.getTextChannel().getName() + " , BY: " + event.getAuthor().getName()+" id: "+ event.getAuthor().getId()+" , Banned user: "+ banned);
             guild.getController().ban(mentioned,7,(event.getAuthor().getName()+reason)).queue();
-            event.getMessage().delete();
+            event.reply(EB.build());
         }catch (Exception e){
-            event.reply("um erro aconteceu");
+            EB.setAuthor("O usuario NÃO foi banido");
+            EB.setTitle(":negative_squared_cross_mark: "+ mentioned.getEffectiveName());
+            EB.setThumbnail(mentioned.getUser().getEffectiveAvatarUrl());
+            EB.setColor(16657966);
+            EB.addField("Id:",mentioned.getUser().getId(),false);
+            EB.addField("Erro","um erro inesperado aconteceu",false);
+            EB.setThumbnail(mentioned.getUser().getAvatarUrl());
+            EB.setFooter("Commando executado por: "+event.getAuthor().getName(),event.getAuthor().getAvatarUrl());
+            EB.setTimestamp(event.getMessage().getCreationTime());
+            event.reply(EB.build());
             return;
         }
+        event.getMessage().delete().queue();
         return;
     }
 }

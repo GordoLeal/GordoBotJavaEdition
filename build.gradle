@@ -1,4 +1,4 @@
-version '2.2.3'
+version '2.2.5'
 
 allprojects {
     apply plugin: 'java'
@@ -13,4 +13,5 @@ repositories {
 dependencies {
     compile 'net.dv8tion:JDA:3.6.0_354'
     compile 'com.jagrosh:jda-utilities:2.1'
+    compile 'com.sedmelluq:lavaplayer:1.2.63'
 }

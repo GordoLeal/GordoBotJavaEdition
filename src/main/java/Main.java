@@ -1,6 +1,7 @@
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.*;
+import net.dv8tion.jda.client.JDAClient;
 import net.dv8tion.jda.core.*;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.entities.Webhook;
@@ -38,11 +39,12 @@ public class Main extends ListenerAdapter{
                 new ping(),
                 new editCoins(),
                 new restart(),
-                new updates()
+                new updates(),
+                new ownerinfo(),
+                new profile()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo pizza"));
-
         try{
 
             new JDABuilder(AccountType.BOT)
@@ -58,6 +60,8 @@ public class Main extends ListenerAdapter{
             System.out.println("PROBLEMAS NA CONEXÃO // ERRO PROVAVEL NO TOKEN // VOCÊ COLOCOU O TOKEN CORRETAMENTE?"+"\n"+"Script encerrado");
             return;
         }
+
+
     }
 
 }
