@@ -17,25 +17,18 @@ import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.VoiceChannel;
 import net.dv8tion.jda.core.managers.AudioManager;
 
+
 import java.awt.*;
 
-/*
-    COMANDO TESTE, É APENAS UTILIZADO PARA TESTAR COMANDOS ANTES DE CRIAR A SUA ESTRURA
-
-*/
-
-public class teste extends Command{
-    public teste(){
-        this.name = "teste";
-        this.arguments = "[teste1]";
-        this.cooldown = 0;
-        this.ownerCommand = true;
-        this.guildOnly = false;
+public class music extends Command {
+    public music(){
+        this.name = "play";
+        this.aliases = new String[]{"toque","dj","tocar"};
+        this.arguments= "arguments";
     }
-
     @Override
-    public void execute(CommandEvent event){
-        /*Guild guild = event.getGuild();//variavel
+    protected void execute(CommandEvent event) {
+        Guild guild = event.getGuild();//variavel
         VoiceChannel voiceChannel = guild.getVoiceChannelById(event.getMember().getVoiceState().getChannel().getId());//vai pegar o canal de voz que a pessoa que executou o comando esta
         AudioManager audioManager = guild.getAudioManager(); // vai pegar o controlador de audio do discord para poder ver os chats de voz
         audioManager.openAudioConnection(voiceChannel);// vai se conectar ao chat de voz
@@ -81,19 +74,23 @@ public class teste extends Command{
             @Override
             public void playlistLoaded(AudioPlaylist playlist) {
                 event.reply("playlist");
+                return;
             }
 
             @Override
             public void noMatches() {
                 event.reply("error");
+                return;
             }
 
             @Override
             public void loadFailed(FriendlyException exception) {
                 event.reply(String.valueOf(exception));
+                return;
             }
         });
         audioPlayer.setVolume(50);
         event.getMessage().delete().queue();
-    */}
+
+    }
 }

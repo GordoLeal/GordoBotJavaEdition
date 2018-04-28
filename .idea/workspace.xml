@@ -6,21 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="conserto de organização">
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ownerinfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/profile.java" afterDir="false" />
+    <list default="true" id="518c165e-c35e-4ad0-a00e-b105d350c46d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/music.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/music/AudioPlayerSendHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/music/MusicQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/music/TrackScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/gordobot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/gordobot_main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/gordobot_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ban.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/kick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/kick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/restart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/restart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/sobre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/sobre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/teste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/updates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/updates.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -63,11 +59,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="caçaniquel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/commands/caçaniquel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1632">
+              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,25 +80,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="AudioPlayerSendHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/music/AudioPlayerSendHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="caçaniquel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/commands/caçaniquel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#613#614#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,7 +99,7 @@
       <file leaf-file-name="fileConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fileConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="374">
               <caret line="44" column="138" selection-start-line="44" selection-start-column="138" selection-end-line="44" selection-end-column="138" />
             </state>
           </provider>
@@ -111,11 +108,67 @@
       <file leaf-file-name="teste.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/commands/teste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3647#3648#0" expanded="true" />
+                <element signature="e#3702#3703#0" expanded="true" />
+                <element signature="e#3763#3764#0" expanded="true" />
+                <element signature="e#3815#3816#0" expanded="true" />
+                <element signature="e#3904#3905#0" expanded="true" />
+                <element signature="e#3974#3975#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/music/MusicQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackScheduler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/music/TrackScheduler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/commands/help.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-614">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1523628742525" expanded="true" signature="4750:4756" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/commands/music.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-436">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -123,20 +176,11 @@
       <file leaf-file-name="profile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/commands/profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+            <state relative-caret-position="173">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ban.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/commands/ban.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -345,9 +389,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6092078843669" />
+        <entry key="$PROJECT_DIR$" value="6092602320713" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3130774256" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1815779033" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="829777938" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2133169376" />
       </map>
@@ -524,15 +568,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/commands/vamerda.java" />
-        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/out/artifacts/gordobot_jar/ownerId.txt" />
-        <option value="$PROJECT_DIR$/out/artifacts/gordobot_jar/token.txt" />
-        <option value="$PROJECT_DIR$/token.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/commands/gamestatuschange.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/changegamestatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/commands/music.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/AudioPlayerSendHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/Music.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/music/AudioPlayerSendHandler.java" />
@@ -559,22 +595,30 @@
         <option value="$PROJECT_DIR$/src/main/java/commands/kick.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/sobre.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/ownerinfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/commands/profile.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/ban.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/AudioPlayerSendHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/TrackScheduler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/music/AudioPlayerSendHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/music/audioplayersendhandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/music/TrackScheduler.java" />
         <option value="$PROJECT_DIR$/src/main/java/music/DefaultAudioPlayerManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/DefaultAudioSendHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/GuildMusicManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/DefaultAudioPlayerManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/TrackScheduler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/commands/teste.java" />
         <option value="$PROJECT_DIR$/src/main/java/commands/caçaniquel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/commands/profile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/TrackManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/AudioLoadResultHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/AudioPlayerSendHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/MusicQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/TrackScheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/MusicQueuea.java" />
+        <option value="$PROJECT_DIR$/src/main/java/music/NewAudioLoadResultHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/commands/teste.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/commands/music.java" />
       </list>
     </option>
   </component>
@@ -598,6 +642,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -608,32 +654,6 @@
             <path>
               <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
               <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="gordobot_jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="gordobot_jar" type="462c0819:PsiDirectoryNode" />
-              <item name="GeneralConfig" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -656,15 +676,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="ban" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
@@ -682,7 +693,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="1a9f42e2:ClassTreeNode" />
+              <item name="music" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
@@ -699,18 +710,29 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="1a9f42e2:ClassTreeNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicQueue" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="gordobot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gordobot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fileConfig" type="1a9f42e2:ClassTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1247,75 +1269,83 @@
       <option name="project" value="LOCAL" />
       <updated>1524008146919</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Atualização de algumas coisas do codigo">
+      <created>1524861310407</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1524861310407</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32662538" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5060514" side_tool="true" weight="0.21604939" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980332" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32872504" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49394855" weight="0.21517028" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32872504" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2602118" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.32817337" />
       <window_info anchor="right" id="Gradle" order="3" sideWeight="0.49199083" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49199083" weight="0.24962178" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39814815" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32662538" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.32817337" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Properties" order="3" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32817337" />
       <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50800914" side_tool="true" weight="0.32980332" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
-      <window_info anchor="bottom" id="Build" order="11" />
-      <window_info id="Designer" order="4" />
+      <window_info anchor="bottom" id="Build" order="11" weight="0.32817337" />
+      <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32561728" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49394855" visible="true" weight="0.21517028" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32980332" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="right" id="Properties" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32872504" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49199083" weight="0.24962178" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Properties" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32872504" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5060514" side_tool="true" weight="0.21604939" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32817337" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32872504" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32980332" />
-      <window_info anchor="right" id="Gradle" order="8" weight="0.32980332" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27836612" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3271605" />
+      <window_info id="Nl-Palette" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Gradle" order="7" sideWeight="0.49199083" weight="0.32980332" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32662538" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287037" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.50800914" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39814815" />
     </layout-to-restore>
   </component>
@@ -1333,7 +1363,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="correção de bugs e adição de descrição" />
     <MESSAGE value="correção de bugs, ré-adicionado a função de expulsar" />
     <MESSAGE value="adição de comando &quot;vá a merda!&quot;, conserto de bugs" />
     <MESSAGE value="..." />
@@ -1358,24 +1387,18 @@
     <MESSAGE value="-correção de erros com o gradle" />
     <MESSAGE value="-correção de bugs e uma pequena falha de digitação" />
     <MESSAGE value="conserto de organização" />
-    <option name="LAST_COMMIT_MESSAGE" value="conserto de organização" />
+    <MESSAGE value="Atualização de algumas coisas do codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização de algumas coisas do codigo" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ownerId.txt" />
-    <entry file="file://$PROJECT_DIR$/out/artifacts/gordobot_jar/token.txt" />
-    <entry file="file://$PROJECT_DIR$/out/artifacts/gordobot_jar/ownerId.txt" />
-    <entry file="file://$PROJECT_DIR$/token.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/mudarstatus.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/vamerda.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/desban.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/gamestatuschange.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/changegamestatus.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/audioplayersendhandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/Music.java" />
     <entry file="file://$PROJECT_DIR$/status.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/Music/GuildMusicManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/Music/PlayerControl.java" />
@@ -1444,17 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/help.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1523628742525" expanded="true" signature="4750:4756" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/updates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1507,126 +1519,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fileConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/audioplayersendhandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/GuildMusicManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/DefaultAudioPlayerManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/DefaultAudioSendHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/TrackScheduler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/ban.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="44" column="138" selection-start-line="44" selection-start-column="138" selection-end-line="44" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+        <state relative-caret-position="703">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/audioplayersendhandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/GuildMusicManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
           <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/DefaultAudioPlayerManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/music.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
-            <element signature="e#1822#1823#0" expanded="true" />
-            <element signature="e#2286#2287#0" expanded="true" />
-            <element signature="e#2313#2314#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <element signature="e#2399#2400#0" expanded="true" />
-            <element signature="e#2540#2541#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2967#2968#0" expanded="true" />
-            <element signature="e#2994#2995#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="e#3092#3093#0" expanded="true" />
-          </folding>
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/DefaultAudioSendHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/music/NewAudioLoadResultHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        <state relative-caret-position="136">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/TrackScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/teste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state relative-caret-position="173">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commands/ban.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/caçaniquel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+        <state relative-caret-position="1632">
+          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/music/AudioPlayerSendHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/music/TrackScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-614">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1523628742525" expanded="true" signature="4750:4756" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fileConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="44" column="138" selection-start-line="44" selection-start-column="138" selection-end-line="44" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/teste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3647#3648#0" expanded="true" />
+            <element signature="e#3702#3703#0" expanded="true" />
+            <element signature="e#3763#3764#0" expanded="true" />
+            <element signature="e#3815#3816#0" expanded="true" />
+            <element signature="e#3904#3905#0" expanded="true" />
+            <element signature="e#3974#3975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/music/MusicQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/commands/music.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
