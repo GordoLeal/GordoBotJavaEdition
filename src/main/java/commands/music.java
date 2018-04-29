@@ -6,30 +6,38 @@ import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
+
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
-import music.AudioPlayerSendHandler;
-import music.TrackScheduler;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.VoiceChannel;
 import net.dv8tion.jda.core.managers.AudioManager;
-
-
 import java.awt.*;
 
 public class music extends Command {
     public music(){
         this.name = "play";
         this.aliases = new String[]{"toque","dj","tocar"};
-        this.arguments= "arguments";
+        this.arguments= "[arguments]";
+        this.cooldown = 15;
+        this.guildOnly = true;
     }
     @Override
     protected void execute(CommandEvent event) {
         Guild guild = event.getGuild();//variavel
-        VoiceChannel voiceChannel = guild.getVoiceChannelById(event.getMember().getVoiceState().getChannel().getId());//vai pegar o canal de voz que a pessoa que executou o comando esta
+        VoiceChannel voiceChannel;
+        if(event.getAuthor().isBot()){
+            return;
+        }
+        if(!event.getMember().getVoiceState().inVoiceChannel()){
+            event.reply(event.getAuthor().getAsMention()+" parece que você não esta em um chat de voz");
+            event.getMessage().delete().queue();
+            return;
+        }
+        voiceChannel = guild.getVoiceChannelById(event.getMember().getVoiceState().getChannel().getId());//vai pegar o canal de voz que a pessoa que executou o comando esta
         AudioManager audioManager = guild.getAudioManager(); // vai pegar o controlador de audio do discord para poder ver os chats de voz
         audioManager.openAudioConnection(voiceChannel);// vai se conectar ao chat de voz
         //Sending audio to an open Audio connection
@@ -74,19 +82,16 @@ public class music extends Command {
             @Override
             public void playlistLoaded(AudioPlaylist playlist) {
                 event.reply("playlist");
-                return;
             }
 
             @Override
             public void noMatches() {
                 event.reply("error");
-                return;
             }
 
             @Override
             public void loadFailed(FriendlyException exception) {
                 event.reply(String.valueOf(exception));
-                return;
             }
         });
         audioPlayer.setVolume(50);
