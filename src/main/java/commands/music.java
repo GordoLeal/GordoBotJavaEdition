@@ -6,7 +6,6 @@ import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
-
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
@@ -57,10 +56,12 @@ public class music extends Command {
         audioPlayer.addListener(trackScheduler);
         String[] args = event.getArgs().split(",");
 
-        if(args[0] == "pular"){
+        if("parar" == args[0]){
             if(event.getMember().getVoiceState().getChannel().getId() == event.getSelfMember().getVoiceState().getChannel().getId()){
                 audioPlayer.stopTrack();
                 event.reply("musica parada");
+                audioManager.closeAudioConnection();
+                return;
             }else {
                 event.reply("você não esta no canal de voz.");
                 return;
@@ -86,7 +87,8 @@ public class music extends Command {
 
             @Override
             public void noMatches() {
-                event.reply("error");
+                event.reply(event.getAuthor().getAsMention()+" Hm... parece que você não colocou o link corretamente.");
+                return;
             }
 
             @Override
@@ -96,6 +98,5 @@ public class music extends Command {
         });
         audioPlayer.setVolume(50);
         event.getMessage().delete().queue();
-
     }
 }

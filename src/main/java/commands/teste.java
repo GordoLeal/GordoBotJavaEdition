@@ -2,6 +2,11 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
+import net.dv8tion.jda.core.JDAInfo;
+import net.dv8tion.jda.core.entities.Guild;
+import net.dv8tion.jda.core.entities.VoiceChannel;
+import net.dv8tion.jda.core.managers.AudioManager;
+import net.dv8tion.jda.core.utils.JDALogger;
 
 /*
     COMANDO TESTE, É APENAS UTILIZADO PARA TESTAR COMANDOS ANTES DE CRIAR A SUA ESTRURA
@@ -79,5 +84,11 @@ public class teste extends Command{
         });
         audioPlayer.setVolume(50);
         event.getMessage().delete().queue();
-    */}
+    */
+        Guild guild = event.getGuild();
+        AudioManager audioManager = guild.getAudioManager();
+        //VoiceChannel channel = event.getMember().getVoiceState().getChannel();
+        audioManager.closeAudioConnection();
+
+    }
 }

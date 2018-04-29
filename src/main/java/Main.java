@@ -39,7 +39,8 @@ public class Main extends ListenerAdapter{
                 new updates(),
                 new ownerinfo(),
                 new profile(),
-                new music()
+                new music(),
+                new stopmusic()
                 );
         client.useHelpBuilder(false);
         client.setGame(Game.playing("e comendo pizza"));
